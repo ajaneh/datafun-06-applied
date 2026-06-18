@@ -1,0 +1,8 @@
+2026-06-10 11:14:35 | INFO | P06 | === RUN START ===
+2026-06-10 11:14:35 | INFO | P06 | project=P06
+2026-06-10 11:14:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-10 11:14:35 | INFO | P06 | python=3.14.0
+2026-06-10 11:14:35 | INFO | P06 | os=Windows 11
+2026-06-10 11:14:35 | INFO | P06 | shell=powershell
+2026-06-10 11:14:35 | INFO | P06 | cwd=.
+2026-06-10 11:14:35 | INFO | P06 | github_actions=False
