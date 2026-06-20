@@ -630,3 +630,1652 @@ From this heatmap, we can see that flipper_length_mm and body_mass_g show strong
 2026-06-18 10:36:18 | INFO | P06 | shell=powershell
 2026-06-18 10:36:18 | INFO | P06 | cwd=.
 2026-06-18 10:36:18 | INFO | P06 | github_actions=False
+2026-06-20 14:49:13 | INFO | P06 | === RUN START ===
+2026-06-20 14:49:13 | INFO | P06 | project=P06
+2026-06-20 14:49:13 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 14:49:13 | INFO | P06 | python=3.14.0
+2026-06-20 14:49:13 | INFO | P06 | os=Windows 11
+2026-06-20 14:49:13 | INFO | P06 | shell=powershell
+2026-06-20 14:49:13 | INFO | P06 | cwd=.
+2026-06-20 14:49:13 | INFO | P06 | github_actions=False
+2026-06-20 14:49:13 | INFO | P06 | === RUN START ===
+2026-06-20 14:49:13 | INFO | P06 | project=EDA
+2026-06-20 14:49:13 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 14:49:13 | INFO | P06 | python=3.14.0
+2026-06-20 14:49:13 | INFO | P06 | os=Windows 11
+2026-06-20 14:49:13 | INFO | P06 | shell=powershell
+2026-06-20 14:49:13 | INFO | P06 | cwd=.
+2026-06-20 14:49:13 | INFO | P06 | github_actions=False
+2026-06-20 14:49:13 | INFO | P06 | ========================
+2026-06-20 14:49:13 | INFO | P06 | START main()
+2026-06-20 14:49:13 | INFO | P06 | ========================
+2026-06-20 14:49:13 | INFO | P06 | --- Section 2: Load dataset: owid-co2-data-subset ---
+2026-06-20 14:49:13 | INFO | P06 | Loading dataset: owid-co2-data-subset
+2026-06-20 14:49:13 | INFO | P06 | Loaded: 350 rows, 14 columns
+2026-06-20 14:49:13 | INFO | P06 | --- Section 3: Inspect shape and basic structure ---
+2026-06-20 14:49:13 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 14:49:14 | DEBUG | P06 | 
+  country  year   population           gdp      co2  co2_per_capita  coal_co2  oil_co2  gas_co2  cement_co2  methane  \
+0  Brazil  1990  149143223.0  1.185475e+12  218.658           1.466    37.095  151.775    7.484      11.062  365.410   
+1  Brazil  1991  151724253.0  1.213090e+12  229.394           1.512    42.466  156.700    7.336      11.776  373.664   
+2  Brazil  1992  154275077.0  1.221829e+12  233.601           1.514    41.203  163.252    7.983       9.770  379.587   
+3  Brazil  1993  156794574.0  1.298221e+12  244.306           1.558    42.343  171.252    8.730      10.164  382.577   
+4  Brazil  1994  159265011.0  1.391784e+12  254.002           1.595    43.664  179.165    8.985      10.086  391.601   
+
+   nitrous_oxide  total_ghg  temperature_change_from_co2  
+0        100.456   2105.299                        0.030  
+1        103.996   2189.194                        0.031  
+2        106.648   2267.928                        0.031  
+3        110.082   2282.487                        0.032  
+4        111.742   2672.895                        0.033  
+2026-06-20 14:49:14 | INFO | P06 | Column names
+2026-06-20 14:49:14 | DEBUG | P06 | ['country', 'year', 'population', 'gdp', 'co2', 'co2_per_capita', 'coal_co2', 'oil_co2', 'gas_co2', 'cement_co2', 'methane', 'nitrous_oxide', 'total_ghg', 'temperature_change_from_co2']
+2026-06-20 14:49:14 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 14:49:14 | INFO | P06 | Dataset shape: 350 rows, 14 columns
+2026-06-20 14:49:14 | INFO | P06 | --- Section 4: Create Data Dictionary and Check Data Quality ---
+2026-06-20 14:49:14 | INFO | P06 | Building starter data dictionary
+2026-06-20 14:49:14 | DEBUG | P06 | 
+                         column    dtype  missing_count  missing_pct
+0                       country      str              0          0.0
+1                          year    int64              0          0.0
+2                    population  float64              0          0.0
+3                           gdp  float64             42         12.0
+4                           co2  float64              0          0.0
+5                co2_per_capita  float64              0          0.0
+6                      coal_co2  float64              0          0.0
+7                       oil_co2  float64              0          0.0
+8                       gas_co2  float64              0          0.0
+9                    cement_co2  float64              0          0.0
+10                      methane  float64              0          0.0
+11                nitrous_oxide  float64              0          0.0
+12                    total_ghg  float64              0          0.0
+13  temperature_change_from_co2  float64              0          0.0
+2026-06-20 14:49:14 | INFO | P06 | Missing values per column:
+2026-06-20 14:49:14 | INFO | P06 | 
+country                         0
+year                            0
+population                      0
+gdp                            42
+co2                             0
+co2_per_capita                  0
+coal_co2                        0
+oil_co2                         0
+gas_co2                         0
+cement_co2                      0
+methane                         0
+nitrous_oxide                   0
+total_ghg                       0
+temperature_change_from_co2     0
+dtype: int64
+2026-06-20 14:49:14 | INFO | P06 | Checking missing values per column
+2026-06-20 14:49:14 | DEBUG | P06 | 
+gdp                            42
+country                         0
+year                            0
+population                      0
+co2                             0
+co2_per_capita                  0
+coal_co2                        0
+oil_co2                         0
+gas_co2                         0
+cement_co2                      0
+methane                         0
+nitrous_oxide                   0
+total_ghg                       0
+temperature_change_from_co2     0
+dtype: int64
+2026-06-20 14:49:14 | INFO | P06 | Duplicate rows detected: 0
+2026-06-20 14:49:14 | INFO | P06 | Call describe() for numeric columns
+2026-06-20 14:49:14 | DEBUG | P06 | 
+              year           co2  co2_per_capita    population           gdp
+count   350.000000    350.000000      350.000000  3.500000e+02  3.080000e+02
+mean   2007.000000   4832.134691        8.145377  1.012341e+09  8.645671e+12
+std      10.113964   9060.307418        5.574669  1.994109e+09  1.968629e+13
+min    1990.000000    218.658000        0.668000  2.778944e+07  8.202743e+11
+25%    1998.000000    500.044750        4.053000  6.530911e+07  2.047581e+12
+50%    2007.000000    919.377000        7.070500  1.386678e+08  3.023014e+12
+75%    2016.000000   4994.685000       10.573750  1.166760e+09  5.977619e+12
+max    2024.000000  38598.578000       21.398000  8.161973e+09  1.301126e+14
+
+2026-06-20 14:49:14 | INFO | P06 | --- Section 5: Create a cleaned view for EDA ---
+2026-06-20 14:49:14 | INFO | P06 | Creating cleaned view for EDA (dropping rows with key missing values)
+2026-06-20 14:49:14 | DEBUG | P06 | Columns required to be non-missing: ['year', 'co2', 'co2_per_capita', 'population', 'gdp', 'country']
+2026-06-20 14:49:14 | INFO | P06 | Original rows: 350
+2026-06-20 14:49:14 | INFO | P06 | Clean rows:    308
+2026-06-20 14:49:14 | INFO | P06 | Rows dropped:  42
+2026-06-20 14:49:14 | INFO | P06 | --- Section 6: Descriptive statistics for numeric columns ---
+2026-06-20 14:49:14 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-20 14:49:14 | DEBUG | P06 | co2_per_capita Statistics (using numpy):
+2026-06-20 14:49:14 | DEBUG | P06 |   Mean: 8.50
+2026-06-20 14:49:14 | DEBUG | P06 |   Std Dev: 5.73
+2026-06-20 14:49:14 | DEBUG | P06 |   Min: 0.67
+2026-06-20 14:49:14 | DEBUG | P06 |   Max: 21.40
+2026-06-20 14:49:14 | DEBUG | P06 |   Range: 20.73
+2026-06-20 14:49:14 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-20 14:49:14 | INFO | P06 | Computing overall descriptive statistics
+2026-06-20 14:49:14 | DEBUG | P06 | 
+                count          mean           std           min           25%           50%           75%  \
+year            308.0  2.006266e+03  9.636076e+00  1.990000e+03  1.998000e+03  2.006000e+03  2.015000e+03   
+co2             308.0  3.088741e+03  6.474068e+03  2.186580e+02  4.916350e+02  8.513980e+02  2.633302e+03   
+co2_per_capita  308.0  8.495893e+00  5.744199e+00  6.680000e-01  2.901500e+00  7.822000e+00  1.096975e+01   
+population      308.0  6.180101e+08  1.384037e+09  2.778944e+07  6.390381e+07  1.275789e+08  4.723936e+08   
+gdp             308.0  8.645671e+12  1.968629e+13  8.202743e+11  2.047581e+12  3.023014e+12  5.977619e+12   
+
+                         max  
+year            2.022000e+03  
+co2             3.752777e+04  
+co2_per_capita  2.139800e+01  
+population      8.021407e+09  
+gdp             1.301126e+14  
+2026-06-20 14:49:14 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-20 14:49:14 | INFO | P06 | Computing descriptive statistics by group
+2026-06-20 14:49:14 | DEBUG | P06 | 
+                year                                      co2                                                   \
+               count         mean       std   min   max count          mean          std        min        max   
+country                                                                                                          
+Brazil            33  2006.000000  9.669540  1990  2022    33    386.024121    99.416512    218.658    556.526   
+Canada            33  2006.000000  9.669540  1990  2022    33    541.119818    39.995135    449.776    589.956   
+China             33  2006.000000  9.669540  1990  2022    33   6658.015455  3207.545348   2483.534  11711.808   
+France            33  2006.000000  9.669540  1990  2022    33    374.195273    40.136420    281.515    419.119   
+Germany           33  2006.000000  9.669540  1990  2022    33    855.715788    97.477463    647.177   1054.796   
+India             33  2006.000000  9.669540  1990  2022    33   1496.659909   717.113573    577.987   2831.132   
+Japan             33  2006.000000  9.669540  1990  2022    33   1210.712667    74.291661   1029.645   1311.876   
+United Kingdom    33  2006.000000  9.669540  1990  2022    33    506.447697    90.802625    311.118    609.413   
+United States     33  2006.000000  9.669540  1990  2022    33   5535.547455   377.675710   4689.954   6126.903   
+World             11  2013.454545  9.943477  1990  2022    11  33791.427545  4958.051414  22732.145  37527.773   
+
+               co2_per_capita                                      population                              \
+                        count       mean       std     min     max      count          mean           std   
+country                                                                                                     
+Brazil                     33   2.065606  0.352282   1.466   2.781         33  1.840960e+08  1.883102e+07   
+Canada                     33  16.459121  1.218597  13.733  18.344         33  3.303238e+07  3.291569e+06   
+China                      33   4.940697  2.137014   2.153   8.218         33  1.313988e+09  8.344915e+07   
+France                     33   6.095394  0.899886   4.272   7.318         33  6.179824e+07  3.078375e+06   
+Germany                    33  10.458455  1.275180   7.739  13.233         33  8.190820e+07  1.020909e+06   
+India                      33   1.227273  0.424370   0.668   1.986         33  1.162973e+09  1.736689e+08   
+Japan                      33   9.551061  0.540427   8.213  10.271         33  1.267329e+08  1.324991e+06   
+United Kingdom             33   8.291152  1.868601   4.563  10.588         33  6.184516e+07  3.544911e+06   
+United States              33  18.674636  2.286546  13.817  21.398         33  2.992977e+08  2.770057e+07   
+World                      11   4.594818  0.214085   4.134   4.752         11  7.327269e+09  8.477486e+08   
+
+                                             gdp                                                          
+                         min           max count          mean           std           min           max  
+country                                                                                                   
+Brazil          1.491432e+08  2.103064e+08    33  2.262925e+12  7.097089e+11  1.185475e+12  3.187413e+12  
+Canada          2.778944e+07  3.882126e+07    33  1.291902e+12  2.981411e+11  8.202743e+11  1.761296e+12  
+China           1.153583e+09  1.426437e+09    33  1.171751e+13  7.417495e+12  3.385122e+12  2.696602e+13  
+France          5.699024e+07  6.627741e+07    33  2.183964e+12  3.303561e+11  1.636208e+12  2.671569e+12  
+Germany         7.970796e+07  8.408623e+07    33  3.049515e+12  5.985213e+11  2.015547e+12  3.909613e+12  
+India           8.649722e+08  1.425423e+09    33  4.891528e+12  2.764509e+12  1.750993e+12  1.047625e+13  
+Japan           1.233998e+08  1.281925e+08    33  4.368696e+12  3.311838e+11  3.699822e+12  4.852985e+12  
+United Kingdom  5.736787e+07  6.817932e+07    33  2.080226e+12  3.617837e+11  1.488075e+12  2.624285e+12  
+United States   2.533734e+08  3.415340e+08    33  1.429605e+13  3.052282e+12  9.224688e+12  1.949317e+13  
+World           5.327803e+09  8.021407e+09    11  1.036518e+14  2.819317e+13  4.303361e+13  1.301126e+14  
+2026-06-20 14:49:14 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-20 14:49:14 | DEBUG | P06 | 
+                               count          mean           std           min           max
+country                                                                                     
+Brazil         year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  3.860241e+02  9.941651e+01  2.186580e+02  5.565260e+02
+               co2_per_capita     33  2.065606e+00  3.522824e-01  1.466000e+00  2.781000e+00
+               population         33  1.840960e+08  1.883102e+07  1.491432e+08  2.103064e+08
+               gdp                33  2.262925e+12  7.097089e+11  1.185475e+12  3.187413e+12
+Canada         year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  5.411198e+02  3.999514e+01  4.497760e+02  5.899560e+02
+               co2_per_capita     33  1.645912e+01  1.218597e+00  1.373300e+01  1.834400e+01
+               population         33  3.303238e+07  3.291569e+06  2.778944e+07  3.882126e+07
+               gdp                33  1.291902e+12  2.981411e+11  8.202743e+11  1.761296e+12
+China          year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  6.658015e+03  3.207545e+03  2.483534e+03  1.171181e+04
+               co2_per_capita     33  4.940697e+00  2.137014e+00  2.153000e+00  8.218000e+00
+               population         33  1.313988e+09  8.344915e+07  1.153583e+09  1.426437e+09
+               gdp                33  1.171751e+13  7.417495e+12  3.385122e+12  2.696602e+13
+France         year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  3.741953e+02  4.013642e+01  2.815150e+02  4.191190e+02
+               co2_per_capita     33  6.095394e+00  8.998860e-01  4.272000e+00  7.318000e+00
+               population         33  6.179824e+07  3.078375e+06  5.699024e+07  6.627741e+07
+               gdp                33  2.183964e+12  3.303561e+11  1.636208e+12  2.671569e+12
+Germany        year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  8.557158e+02  9.747746e+01  6.471770e+02  1.054796e+03
+               co2_per_capita     33  1.045845e+01  1.275180e+00  7.739000e+00  1.323300e+01
+               population         33  8.190820e+07  1.020909e+06  7.970796e+07  8.408623e+07
+               gdp                33  3.049515e+12  5.985213e+11  2.015547e+12  3.909613e+12
+India          year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  1.496660e+03  7.171136e+02  5.779870e+02  2.831132e+03
+               co2_per_capita     33  1.227273e+00  4.243703e-01  6.680000e-01  1.986000e+00
+               population         33  1.162973e+09  1.736689e+08  8.649722e+08  1.425423e+09
+               gdp                33  4.891528e+12  2.764509e+12  1.750993e+12  1.047625e+13
+Japan          year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  1.210713e+03  7.429166e+01  1.029645e+03  1.311876e+03
+               co2_per_capita     33  9.551061e+00  5.404270e-01  8.213000e+00  1.027100e+01
+               population         33  1.267329e+08  1.324991e+06  1.233998e+08  1.281925e+08
+               gdp                33  4.368696e+12  3.311838e+11  3.699822e+12  4.852985e+12
+United Kingdom year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  5.064477e+02  9.080263e+01  3.111180e+02  6.094130e+02
+               co2_per_capita     33  8.291152e+00  1.868601e+00  4.563000e+00  1.058800e+01
+               population         33  6.184516e+07  3.544911e+06  5.736787e+07  6.817932e+07
+               gdp                33  2.080226e+12  3.617837e+11  1.488075e+12  2.624285e+12
+United States  year               33  2.006000e+03  9.669540e+00  1.990000e+03  2.022000e+03
+               co2                33  5.535547e+03  3.776757e+02  4.689954e+03  6.126903e+03
+               co2_per_capita     33  1.867464e+01  2.286546e+00  1.381700e+01  2.139800e+01
+               population         33  2.992977e+08  2.770057e+07  2.533734e+08  3.415340e+08
+               gdp                33  1.429605e+13  3.052282e+12  9.224688e+12  1.949317e+13
+World          year               11  2.013455e+03  9.943477e+00  1.990000e+03  2.022000e+03
+               co2                11  3.379143e+04  4.958051e+03  2.273215e+04  3.752777e+04
+               co2_per_capita     11  4.594818e+00  2.140854e-01  4.134000e+00  4.752000e+00
+               population         11  7.327269e+09  8.477486e+08  5.327803e+09  8.021407e+09
+               gdp                11  1.036518e+14  2.819317e+13  4.303361e+13  1.301126e+14
+2026-06-20 14:49:14 | INFO | P06 | --- Section 7: Correlation matrix for numeric columns ---
+2026-06-20 14:49:14 | INFO | P06 | Computing correlation matrix for numeric columns
+2026-06-20 14:49:14 | INFO | P06 | 
+Correlation matrix:
+2026-06-20 14:49:14 | DEBUG | P06 | 
+                    year       co2  co2_per_capita  population       gdp
+year            1.000000  0.215089       -0.091293    0.178675  0.263472
+co2             0.215089  1.000000       -0.029367    0.945842  0.977864
+co2_per_capita -0.091293 -0.029367        1.000000   -0.272804 -0.053033
+population      0.178675  0.945842       -0.272804    1.000000  0.940825
+gdp             0.263472  0.977864       -0.053033    0.940825  1.000000
+2026-06-20 14:49:14 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-20 14:49:15 | INFO | P06 | 
+CUSTOM: Update these notes and use Markdown cells to narrate and tell the story as you explore. For example:
+
+Interpretation:
+
+ - Values close to 1 (dark red) = strong positive correlation (both increase together)
+ - Values close to -1 (dark blue) = strong negative correlation (one increases, other decreases)
+ - Values close to 0 (white) = little or no linear relationship
+ - The diagonal is always 1 (each variable correlates perfectly with itself)
+
+From this heatmap, we can see that flipper_length_mm and body_mass_g show strong positive correlation (~0.87).
+
+2026-06-20 14:49:15 | INFO | P06 | --- Section 8: Charts ---
+2026-06-20 14:49:15 | INFO | P06 | ---- Creating Scatter Plot to see Relationships ------
+2026-06-20 14:49:15 | INFO | P06 | ----   Use clean dataframe ---------------------------
+2026-06-20 14:49:15 | INFO | P06 | ----   Set x to GDP -----------------------
+2026-06-20 14:49:15 | INFO | P06 | ----   Set y to CO2 emissions --------------------------
+2026-06-20 14:49:15 | INFO | P06 | ----   Set the hue (color mapping) to the group column --
+2026-06-20 14:49:15 | INFO | P06 | ------ Creating Box Plot to see Distribution: ---------
+2026-06-20 14:49:15 | INFO | P06 | ------   Use clean dataframe --------------------------
+2026-06-20 14:49:15 | INFO | P06 | ------   Set x to the group column --------------------
+2026-06-20 14:49:15 | INFO | P06 | ------   Set y to CO2 per capita ----------------------
+2026-06-20 14:49:15 | INFO | P06 | --- Section 9: Summary and next steps ---
+2026-06-20 14:49:15 | INFO | P06 | ========================
+2026-06-20 14:49:15 | INFO | P06 | SUMMARY
+2026-06-20 14:49:15 | INFO | P06 | ========================
+2026-06-20 14:49:15 | INFO | P06 | Dataset: owid-co2-data-subset
+2026-06-20 14:49:15 | INFO | P06 | Original rows: 350
+2026-06-20 14:49:15 | INFO | P06 | Clean rows:    308
+2026-06-20 14:49:15 | INFO | P06 | Groups found in country: ['Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Japan', 'United Kingdom', 'United States', 'World']
+2026-06-20 14:49:15 | INFO | P06 | ======================
+2026-06-20 14:49:15 | INFO | P06 | Review the results. 
+2026-06-20 14:49:15 | INFO | P06 | Determine the strongest correlations. 
+2026-06-20 14:49:15 | INFO | P06 | ======================
+2026-06-20 14:49:15 | INFO | P06 | Look for interesting patterns in the charts. 
+2026-06-20 14:49:15 | INFO | P06 | Repeat the process, exploring additional angles.
+2026-06-20 14:49:15 | INFO | P06 | After finding interesting insights, conclude your analysis.
+2026-06-20 14:49:15 | INFO | P06 | ======================
+2026-06-20 14:49:15 | INFO | P06 | Include instructions and specifics in your README.md file.
+2026-06-20 14:49:15 | INFO | P06 | Write up your narrative on your docs/index.md file.
+2026-06-20 14:49:15 | INFO | P06 | Include your next step suggestions for further analysis or modeling.
+2026-06-20 14:49:15 | INFO | P06 | ======================
+2026-06-20 14:49:15 | INFO | P06 | ----- in a script, call plt.show() once at the end to display all charts -----
+2026-06-20 14:49:15 | INFO | P06 | ----- in a script, close the chart windows (with the close button) to continue  -----
+2026-06-20 14:49:23 | INFO | P06 | EDA workflow complete
+2026-06-20 14:49:23 | INFO | P06 | IMPORTANT: This script creates chart windows.
+2026-06-20 14:49:23 | INFO | P06 | Close any chart windows and terminate this process with CTRL+c as needed.
+2026-06-20 14:49:23 | INFO | P06 | ========================
+2026-06-20 14:49:23 | INFO | P06 | Executed successfully!
+2026-06-20 14:49:23 | INFO | P06 | ========================
+2026-06-20 16:34:43 | INFO | P06 | === RUN START ===
+2026-06-20 16:34:43 | INFO | P06 | project=P06
+2026-06-20 16:34:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:34:43 | INFO | P06 | python=3.14.0
+2026-06-20 16:34:43 | INFO | P06 | os=Windows 11
+2026-06-20 16:34:43 | INFO | P06 | shell=powershell
+2026-06-20 16:34:43 | INFO | P06 | cwd=src\datafun
+2026-06-20 16:34:43 | INFO | P06 | github_actions=False
+2026-06-20 16:34:43 | INFO | P06 | === RUN START ===
+2026-06-20 16:34:43 | INFO | P06 | project=P06
+2026-06-20 16:34:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:34:43 | INFO | P06 | python=3.14.0
+2026-06-20 16:34:43 | INFO | P06 | os=Windows 11
+2026-06-20 16:34:43 | INFO | P06 | shell=powershell
+2026-06-20 16:34:43 | INFO | P06 | cwd=src\datafun
+2026-06-20 16:34:43 | INFO | P06 | github_actions=False
+2026-06-20 16:34:43 | INFO | P06 | === RUN START ===
+2026-06-20 16:34:43 | INFO | P06 | project=EDA
+2026-06-20 16:34:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:34:43 | INFO | P06 | python=3.14.0
+2026-06-20 16:34:43 | INFO | P06 | os=Windows 11
+2026-06-20 16:34:43 | INFO | P06 | shell=powershell
+2026-06-20 16:34:43 | INFO | P06 | cwd=src\datafun
+2026-06-20 16:34:43 | INFO | P06 | github_actions=False
+2026-06-20 16:35:01 | INFO | P06 | === RUN START ===
+2026-06-20 16:35:01 | INFO | P06 | project=P06
+2026-06-20 16:35:01 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:35:01 | INFO | P06 | python=3.14.0
+2026-06-20 16:35:01 | INFO | P06 | os=Windows 11
+2026-06-20 16:35:01 | INFO | P06 | shell=powershell
+2026-06-20 16:35:01 | INFO | P06 | cwd=src\datafun
+2026-06-20 16:35:01 | INFO | P06 | github_actions=False
+2026-06-20 16:35:01 | INFO | P06 | === RUN START ===
+2026-06-20 16:35:01 | INFO | P06 | project=P06
+2026-06-20 16:35:01 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:35:01 | INFO | P06 | python=3.14.0
+2026-06-20 16:35:01 | INFO | P06 | os=Windows 11
+2026-06-20 16:35:01 | INFO | P06 | shell=powershell
+2026-06-20 16:35:01 | INFO | P06 | cwd=src\datafun
+2026-06-20 16:35:01 | INFO | P06 | github_actions=False
+2026-06-20 16:35:01 | INFO | P06 | === RUN START ===
+2026-06-20 16:35:01 | INFO | P06 | project=EDA
+2026-06-20 16:35:01 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:35:01 | INFO | P06 | python=3.14.0
+2026-06-20 16:35:01 | INFO | P06 | os=Windows 11
+2026-06-20 16:35:01 | INFO | P06 | shell=powershell
+2026-06-20 16:35:01 | INFO | P06 | cwd=src\datafun
+2026-06-20 16:35:01 | INFO | P06 | github_actions=False
+2026-06-20 16:35:01 | INFO | P06 | Loading dataset: owid-co2-data-subset
+2026-06-20 16:37:19 | INFO | P06 | === RUN START ===
+2026-06-20 16:37:19 | INFO | P06 | project=P06
+2026-06-20 16:37:19 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:37:19 | INFO | P06 | python=3.14.0
+2026-06-20 16:37:19 | INFO | P06 | os=Windows 11
+2026-06-20 16:37:19 | INFO | P06 | shell=powershell
+2026-06-20 16:37:19 | INFO | P06 | cwd=.
+2026-06-20 16:37:19 | INFO | P06 | github_actions=False
+2026-06-20 16:37:19 | INFO | P06 | === RUN START ===
+2026-06-20 16:37:19 | INFO | P06 | project=P06
+2026-06-20 16:37:19 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:37:19 | INFO | P06 | python=3.14.0
+2026-06-20 16:37:19 | INFO | P06 | os=Windows 11
+2026-06-20 16:37:19 | INFO | P06 | shell=powershell
+2026-06-20 16:37:19 | INFO | P06 | cwd=.
+2026-06-20 16:37:19 | INFO | P06 | github_actions=False
+2026-06-20 16:37:19 | INFO | P06 | === RUN START ===
+2026-06-20 16:37:19 | INFO | P06 | project=EDA
+2026-06-20 16:37:19 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:37:19 | INFO | P06 | python=3.14.0
+2026-06-20 16:37:19 | INFO | P06 | os=Windows 11
+2026-06-20 16:37:19 | INFO | P06 | shell=powershell
+2026-06-20 16:37:19 | INFO | P06 | cwd=.
+2026-06-20 16:37:19 | INFO | P06 | github_actions=False
+2026-06-20 16:37:19 | INFO | P06 | Loading dataset: owid-co2-data-subset
+2026-06-20 16:39:35 | INFO | P06 | === RUN START ===
+2026-06-20 16:39:35 | INFO | P06 | project=P06
+2026-06-20 16:39:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:39:35 | INFO | P06 | python=3.14.0
+2026-06-20 16:39:35 | INFO | P06 | os=Windows 11
+2026-06-20 16:39:35 | INFO | P06 | shell=powershell
+2026-06-20 16:39:35 | INFO | P06 | cwd=.
+2026-06-20 16:39:35 | INFO | P06 | github_actions=False
+2026-06-20 16:39:35 | INFO | P06 | === RUN START ===
+2026-06-20 16:39:35 | INFO | P06 | project=P06
+2026-06-20 16:39:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:39:35 | INFO | P06 | python=3.14.0
+2026-06-20 16:39:35 | INFO | P06 | os=Windows 11
+2026-06-20 16:39:35 | INFO | P06 | shell=powershell
+2026-06-20 16:39:35 | INFO | P06 | cwd=.
+2026-06-20 16:39:35 | INFO | P06 | github_actions=False
+2026-06-20 16:39:35 | INFO | P06 | === RUN START ===
+2026-06-20 16:39:35 | INFO | P06 | project=EDA
+2026-06-20 16:39:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:39:35 | INFO | P06 | python=3.14.0
+2026-06-20 16:39:35 | INFO | P06 | os=Windows 11
+2026-06-20 16:39:35 | INFO | P06 | shell=powershell
+2026-06-20 16:39:35 | INFO | P06 | cwd=.
+2026-06-20 16:39:35 | INFO | P06 | github_actions=False
+2026-06-20 16:43:38 | INFO | P06 | === RUN START ===
+2026-06-20 16:43:38 | INFO | P06 | project=P06
+2026-06-20 16:43:38 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:43:38 | INFO | P06 | python=3.14.0
+2026-06-20 16:43:38 | INFO | P06 | os=Windows 11
+2026-06-20 16:43:38 | INFO | P06 | shell=powershell
+2026-06-20 16:43:38 | INFO | P06 | cwd=.
+2026-06-20 16:43:38 | INFO | P06 | github_actions=False
+2026-06-20 16:43:38 | INFO | P06 | === RUN START ===
+2026-06-20 16:43:38 | INFO | P06 | project=EDA
+2026-06-20 16:43:38 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:43:38 | INFO | P06 | python=3.14.0
+2026-06-20 16:43:38 | INFO | P06 | os=Windows 11
+2026-06-20 16:43:38 | INFO | P06 | shell=powershell
+2026-06-20 16:43:38 | INFO | P06 | cwd=.
+2026-06-20 16:43:38 | INFO | P06 | github_actions=False
+2026-06-20 16:44:16 | INFO | P06 | === RUN START ===
+2026-06-20 16:44:16 | INFO | P06 | project=P06
+2026-06-20 16:44:16 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:44:16 | INFO | P06 | python=3.14.0
+2026-06-20 16:44:16 | INFO | P06 | os=Windows 11
+2026-06-20 16:44:16 | INFO | P06 | shell=powershell
+2026-06-20 16:44:16 | INFO | P06 | cwd=.
+2026-06-20 16:44:16 | INFO | P06 | github_actions=False
+2026-06-20 16:44:16 | INFO | P06 | === RUN START ===
+2026-06-20 16:44:16 | INFO | P06 | project=P06
+2026-06-20 16:44:16 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:44:16 | INFO | P06 | python=3.14.0
+2026-06-20 16:44:16 | INFO | P06 | os=Windows 11
+2026-06-20 16:44:16 | INFO | P06 | shell=powershell
+2026-06-20 16:44:16 | INFO | P06 | cwd=.
+2026-06-20 16:44:16 | INFO | P06 | github_actions=False
+2026-06-20 16:44:16 | INFO | P06 | === RUN START ===
+2026-06-20 16:44:16 | INFO | P06 | project=EDA
+2026-06-20 16:44:16 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:44:16 | INFO | P06 | python=3.14.0
+2026-06-20 16:44:16 | INFO | P06 | os=Windows 11
+2026-06-20 16:44:16 | INFO | P06 | shell=powershell
+2026-06-20 16:44:16 | INFO | P06 | cwd=.
+2026-06-20 16:44:16 | INFO | P06 | github_actions=False
+2026-06-20 16:44:16 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 16:45:43 | INFO | P06 | === RUN START ===
+2026-06-20 16:45:43 | INFO | P06 | project=P06
+2026-06-20 16:45:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:45:43 | INFO | P06 | python=3.14.0
+2026-06-20 16:45:43 | INFO | P06 | os=Windows 11
+2026-06-20 16:45:43 | INFO | P06 | shell=powershell
+2026-06-20 16:45:43 | INFO | P06 | cwd=.
+2026-06-20 16:45:43 | INFO | P06 | github_actions=False
+2026-06-20 16:45:43 | INFO | P06 | === RUN START ===
+2026-06-20 16:45:43 | INFO | P06 | project=P06
+2026-06-20 16:45:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:45:43 | INFO | P06 | python=3.14.0
+2026-06-20 16:45:43 | INFO | P06 | os=Windows 11
+2026-06-20 16:45:43 | INFO | P06 | shell=powershell
+2026-06-20 16:45:43 | INFO | P06 | cwd=.
+2026-06-20 16:45:43 | INFO | P06 | github_actions=False
+2026-06-20 16:45:43 | INFO | P06 | === RUN START ===
+2026-06-20 16:45:43 | INFO | P06 | project=EDA
+2026-06-20 16:45:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 16:45:43 | INFO | P06 | python=3.14.0
+2026-06-20 16:45:43 | INFO | P06 | os=Windows 11
+2026-06-20 16:45:43 | INFO | P06 | shell=powershell
+2026-06-20 16:45:43 | INFO | P06 | cwd=.
+2026-06-20 16:45:43 | INFO | P06 | github_actions=False
+2026-06-20 16:45:43 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 16:45:47 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 16:45:47 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 16:45:47 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 16:45:47 | INFO | P06 | Column names
+2026-06-20 16:45:47 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 16:45:47 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 16:45:47 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 16:45:47 | INFO | P06 | Building starter data dictionary
+2026-06-20 16:45:47 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:04:15 | INFO | P06 | === RUN START ===
+2026-06-20 17:04:15 | INFO | P06 | project=P06
+2026-06-20 17:04:15 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:04:15 | INFO | P06 | python=3.14.0
+2026-06-20 17:04:15 | INFO | P06 | os=Windows 11
+2026-06-20 17:04:15 | INFO | P06 | shell=powershell
+2026-06-20 17:04:15 | INFO | P06 | cwd=.
+2026-06-20 17:04:15 | INFO | P06 | github_actions=False
+2026-06-20 17:04:15 | INFO | P06 | === RUN START ===
+2026-06-20 17:04:15 | INFO | P06 | project=P06
+2026-06-20 17:04:15 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:04:15 | INFO | P06 | python=3.14.0
+2026-06-20 17:04:15 | INFO | P06 | os=Windows 11
+2026-06-20 17:04:15 | INFO | P06 | shell=powershell
+2026-06-20 17:04:15 | INFO | P06 | cwd=.
+2026-06-20 17:04:15 | INFO | P06 | github_actions=False
+2026-06-20 17:04:15 | INFO | P06 | === RUN START ===
+2026-06-20 17:04:15 | INFO | P06 | project=EDA
+2026-06-20 17:04:15 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:04:15 | INFO | P06 | python=3.14.0
+2026-06-20 17:04:15 | INFO | P06 | os=Windows 11
+2026-06-20 17:04:15 | INFO | P06 | shell=powershell
+2026-06-20 17:04:15 | INFO | P06 | cwd=.
+2026-06-20 17:04:15 | INFO | P06 | github_actions=False
+2026-06-20 17:04:15 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:04:16 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:04:16 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:04:16 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:04:16 | INFO | P06 | Column names
+2026-06-20 17:04:16 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:04:16 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:04:16 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:04:16 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:04:16 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:07:25 | INFO | P06 | === RUN START ===
+2026-06-20 17:07:25 | INFO | P06 | project=P06
+2026-06-20 17:07:25 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:07:25 | INFO | P06 | python=3.14.0
+2026-06-20 17:07:25 | INFO | P06 | os=Windows 11
+2026-06-20 17:07:25 | INFO | P06 | shell=powershell
+2026-06-20 17:07:25 | INFO | P06 | cwd=.
+2026-06-20 17:07:25 | INFO | P06 | github_actions=False
+2026-06-20 17:07:25 | INFO | P06 | === RUN START ===
+2026-06-20 17:07:25 | INFO | P06 | project=P06
+2026-06-20 17:07:25 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:07:25 | INFO | P06 | python=3.14.0
+2026-06-20 17:07:25 | INFO | P06 | os=Windows 11
+2026-06-20 17:07:25 | INFO | P06 | shell=powershell
+2026-06-20 17:07:25 | INFO | P06 | cwd=.
+2026-06-20 17:07:25 | INFO | P06 | github_actions=False
+2026-06-20 17:07:25 | INFO | P06 | === RUN START ===
+2026-06-20 17:07:25 | INFO | P06 | project=EDA
+2026-06-20 17:07:25 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:07:25 | INFO | P06 | python=3.14.0
+2026-06-20 17:07:25 | INFO | P06 | os=Windows 11
+2026-06-20 17:07:25 | INFO | P06 | shell=powershell
+2026-06-20 17:07:25 | INFO | P06 | cwd=.
+2026-06-20 17:07:25 | INFO | P06 | github_actions=False
+2026-06-20 17:07:25 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:07:25 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:07:25 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:07:25 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:07:25 | INFO | P06 | Column names
+2026-06-20 17:07:25 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:07:25 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:07:25 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:07:25 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:07:25 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:08:05 | INFO | P06 | === RUN START ===
+2026-06-20 17:08:05 | INFO | P06 | project=P06
+2026-06-20 17:08:05 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:08:05 | INFO | P06 | python=3.14.0
+2026-06-20 17:08:05 | INFO | P06 | os=Windows 11
+2026-06-20 17:08:05 | INFO | P06 | shell=powershell
+2026-06-20 17:08:05 | INFO | P06 | cwd=.
+2026-06-20 17:08:05 | INFO | P06 | github_actions=False
+2026-06-20 17:08:05 | INFO | P06 | === RUN START ===
+2026-06-20 17:08:05 | INFO | P06 | project=P06
+2026-06-20 17:08:05 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:08:05 | INFO | P06 | python=3.14.0
+2026-06-20 17:08:05 | INFO | P06 | os=Windows 11
+2026-06-20 17:08:05 | INFO | P06 | shell=powershell
+2026-06-20 17:08:05 | INFO | P06 | cwd=.
+2026-06-20 17:08:05 | INFO | P06 | github_actions=False
+2026-06-20 17:08:05 | INFO | P06 | === RUN START ===
+2026-06-20 17:08:05 | INFO | P06 | project=EDA
+2026-06-20 17:08:05 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:08:05 | INFO | P06 | python=3.14.0
+2026-06-20 17:08:05 | INFO | P06 | os=Windows 11
+2026-06-20 17:08:05 | INFO | P06 | shell=powershell
+2026-06-20 17:08:05 | INFO | P06 | cwd=.
+2026-06-20 17:08:05 | INFO | P06 | github_actions=False
+2026-06-20 17:08:05 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:08:05 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:08:05 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:08:05 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:08:05 | INFO | P06 | Column names
+2026-06-20 17:08:05 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:08:05 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:08:05 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:08:05 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:08:05 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:08:36 | INFO | P06 | === RUN START ===
+2026-06-20 17:08:36 | INFO | P06 | project=P06
+2026-06-20 17:08:36 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:08:36 | INFO | P06 | python=3.14.0
+2026-06-20 17:08:36 | INFO | P06 | os=Windows 11
+2026-06-20 17:08:36 | INFO | P06 | shell=powershell
+2026-06-20 17:08:36 | INFO | P06 | cwd=.
+2026-06-20 17:08:36 | INFO | P06 | github_actions=False
+2026-06-20 17:08:36 | INFO | P06 | === RUN START ===
+2026-06-20 17:08:36 | INFO | P06 | project=P06
+2026-06-20 17:08:36 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:08:36 | INFO | P06 | python=3.14.0
+2026-06-20 17:08:36 | INFO | P06 | os=Windows 11
+2026-06-20 17:08:36 | INFO | P06 | shell=powershell
+2026-06-20 17:08:36 | INFO | P06 | cwd=.
+2026-06-20 17:08:36 | INFO | P06 | github_actions=False
+2026-06-20 17:08:36 | INFO | P06 | === RUN START ===
+2026-06-20 17:08:36 | INFO | P06 | project=EDA
+2026-06-20 17:08:36 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:08:36 | INFO | P06 | python=3.14.0
+2026-06-20 17:08:36 | INFO | P06 | os=Windows 11
+2026-06-20 17:08:36 | INFO | P06 | shell=powershell
+2026-06-20 17:08:36 | INFO | P06 | cwd=.
+2026-06-20 17:08:36 | INFO | P06 | github_actions=False
+2026-06-20 17:08:36 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:08:36 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:08:36 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:08:36 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:08:36 | INFO | P06 | Column names
+2026-06-20 17:08:36 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:08:36 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:08:36 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:08:36 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:08:36 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:09:35 | INFO | P06 | === RUN START ===
+2026-06-20 17:09:35 | INFO | P06 | project=P06
+2026-06-20 17:09:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:09:35 | INFO | P06 | python=3.14.0
+2026-06-20 17:09:35 | INFO | P06 | os=Windows 11
+2026-06-20 17:09:35 | INFO | P06 | shell=powershell
+2026-06-20 17:09:35 | INFO | P06 | cwd=.
+2026-06-20 17:09:35 | INFO | P06 | github_actions=False
+2026-06-20 17:09:35 | INFO | P06 | === RUN START ===
+2026-06-20 17:09:35 | INFO | P06 | project=P06
+2026-06-20 17:09:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:09:35 | INFO | P06 | python=3.14.0
+2026-06-20 17:09:35 | INFO | P06 | os=Windows 11
+2026-06-20 17:09:35 | INFO | P06 | shell=powershell
+2026-06-20 17:09:35 | INFO | P06 | cwd=.
+2026-06-20 17:09:35 | INFO | P06 | github_actions=False
+2026-06-20 17:09:35 | INFO | P06 | === RUN START ===
+2026-06-20 17:09:35 | INFO | P06 | project=EDA
+2026-06-20 17:09:35 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:09:35 | INFO | P06 | python=3.14.0
+2026-06-20 17:09:35 | INFO | P06 | os=Windows 11
+2026-06-20 17:09:35 | INFO | P06 | shell=powershell
+2026-06-20 17:09:35 | INFO | P06 | cwd=.
+2026-06-20 17:09:35 | INFO | P06 | github_actions=False
+2026-06-20 17:09:35 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:09:36 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:09:36 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:09:36 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:09:36 | INFO | P06 | Column names
+2026-06-20 17:09:36 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:09:36 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:09:36 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:09:36 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:09:36 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:11:36 | INFO | P06 | === RUN START ===
+2026-06-20 17:11:36 | INFO | P06 | project=P06
+2026-06-20 17:11:36 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:11:36 | INFO | P06 | python=3.14.0
+2026-06-20 17:11:36 | INFO | P06 | os=Windows 11
+2026-06-20 17:11:36 | INFO | P06 | shell=powershell
+2026-06-20 17:11:36 | INFO | P06 | cwd=.
+2026-06-20 17:11:36 | INFO | P06 | github_actions=False
+2026-06-20 17:11:36 | INFO | P06 | === RUN START ===
+2026-06-20 17:11:36 | INFO | P06 | project=P06
+2026-06-20 17:11:36 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:11:36 | INFO | P06 | python=3.14.0
+2026-06-20 17:11:36 | INFO | P06 | os=Windows 11
+2026-06-20 17:11:36 | INFO | P06 | shell=powershell
+2026-06-20 17:11:36 | INFO | P06 | cwd=.
+2026-06-20 17:11:36 | INFO | P06 | github_actions=False
+2026-06-20 17:11:36 | INFO | P06 | === RUN START ===
+2026-06-20 17:11:36 | INFO | P06 | project=EDA
+2026-06-20 17:11:36 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:11:36 | INFO | P06 | python=3.14.0
+2026-06-20 17:11:36 | INFO | P06 | os=Windows 11
+2026-06-20 17:11:36 | INFO | P06 | shell=powershell
+2026-06-20 17:11:36 | INFO | P06 | cwd=.
+2026-06-20 17:11:36 | INFO | P06 | github_actions=False
+2026-06-20 17:11:36 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:11:37 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:11:37 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:11:37 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:11:37 | INFO | P06 | Column names
+2026-06-20 17:11:37 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:11:37 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:11:37 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:11:37 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:11:37 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:20:52 | INFO | P06 | === RUN START ===
+2026-06-20 17:20:52 | INFO | P06 | project=P06
+2026-06-20 17:20:52 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:20:52 | INFO | P06 | python=3.14.0
+2026-06-20 17:20:52 | INFO | P06 | os=Windows 11
+2026-06-20 17:20:52 | INFO | P06 | shell=powershell
+2026-06-20 17:20:52 | INFO | P06 | cwd=.
+2026-06-20 17:20:52 | INFO | P06 | github_actions=False
+2026-06-20 17:20:52 | INFO | P06 | === RUN START ===
+2026-06-20 17:20:52 | INFO | P06 | project=P06
+2026-06-20 17:20:52 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:20:52 | INFO | P06 | python=3.14.0
+2026-06-20 17:20:52 | INFO | P06 | os=Windows 11
+2026-06-20 17:20:52 | INFO | P06 | shell=powershell
+2026-06-20 17:20:52 | INFO | P06 | cwd=.
+2026-06-20 17:20:52 | INFO | P06 | github_actions=False
+2026-06-20 17:20:52 | INFO | P06 | === RUN START ===
+2026-06-20 17:20:52 | INFO | P06 | project=EDA
+2026-06-20 17:20:52 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:20:52 | INFO | P06 | python=3.14.0
+2026-06-20 17:20:52 | INFO | P06 | os=Windows 11
+2026-06-20 17:20:52 | INFO | P06 | shell=powershell
+2026-06-20 17:20:52 | INFO | P06 | cwd=.
+2026-06-20 17:20:52 | INFO | P06 | github_actions=False
+2026-06-20 17:20:52 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:20:53 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:20:53 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:20:53 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:20:53 | INFO | P06 | Column names
+2026-06-20 17:20:53 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:20:53 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:20:53 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:20:53 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:20:53 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                           Employment    object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:22:38 | INFO | P06 | === RUN START ===
+2026-06-20 17:22:38 | INFO | P06 | project=P06
+2026-06-20 17:22:38 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:22:38 | INFO | P06 | python=3.14.0
+2026-06-20 17:22:38 | INFO | P06 | os=Windows 11
+2026-06-20 17:22:38 | INFO | P06 | shell=powershell
+2026-06-20 17:22:38 | INFO | P06 | cwd=.
+2026-06-20 17:22:38 | INFO | P06 | github_actions=False
+2026-06-20 17:22:38 | INFO | P06 | === RUN START ===
+2026-06-20 17:22:38 | INFO | P06 | project=P06
+2026-06-20 17:22:38 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:22:38 | INFO | P06 | python=3.14.0
+2026-06-20 17:22:38 | INFO | P06 | os=Windows 11
+2026-06-20 17:22:38 | INFO | P06 | shell=powershell
+2026-06-20 17:22:38 | INFO | P06 | cwd=.
+2026-06-20 17:22:38 | INFO | P06 | github_actions=False
+2026-06-20 17:22:38 | INFO | P06 | === RUN START ===
+2026-06-20 17:22:38 | INFO | P06 | project=EDA
+2026-06-20 17:22:38 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:22:38 | INFO | P06 | python=3.14.0
+2026-06-20 17:22:38 | INFO | P06 | os=Windows 11
+2026-06-20 17:22:38 | INFO | P06 | shell=powershell
+2026-06-20 17:22:38 | INFO | P06 | cwd=.
+2026-06-20 17:22:38 | INFO | P06 | github_actions=False
+2026-06-20 17:22:38 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:22:38 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:22:38 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:22:38 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment   Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:22:38 | INFO | P06 | Column names
+2026-06-20 17:22:38 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment ', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:22:38 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:22:38 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:24:29 | INFO | P06 | === RUN START ===
+2026-06-20 17:24:29 | INFO | P06 | project=P06
+2026-06-20 17:24:29 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:24:29 | INFO | P06 | python=3.14.0
+2026-06-20 17:24:29 | INFO | P06 | os=Windows 11
+2026-06-20 17:24:29 | INFO | P06 | shell=powershell
+2026-06-20 17:24:29 | INFO | P06 | cwd=.
+2026-06-20 17:24:29 | INFO | P06 | github_actions=False
+2026-06-20 17:24:29 | INFO | P06 | === RUN START ===
+2026-06-20 17:24:29 | INFO | P06 | project=P06
+2026-06-20 17:24:29 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:24:29 | INFO | P06 | python=3.14.0
+2026-06-20 17:24:29 | INFO | P06 | os=Windows 11
+2026-06-20 17:24:29 | INFO | P06 | shell=powershell
+2026-06-20 17:24:29 | INFO | P06 | cwd=.
+2026-06-20 17:24:29 | INFO | P06 | github_actions=False
+2026-06-20 17:24:29 | INFO | P06 | === RUN START ===
+2026-06-20 17:24:29 | INFO | P06 | project=EDA
+2026-06-20 17:24:29 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:24:29 | INFO | P06 | python=3.14.0
+2026-06-20 17:24:29 | INFO | P06 | os=Windows 11
+2026-06-20 17:24:29 | INFO | P06 | shell=powershell
+2026-06-20 17:24:29 | INFO | P06 | cwd=.
+2026-06-20 17:24:29 | INFO | P06 | github_actions=False
+2026-06-20 17:24:29 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:24:30 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:24:30 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:24:30 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:24:30 | INFO | P06 | Column names
+2026-06-20 17:24:30 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:24:30 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:24:30 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:26:34 | INFO | P06 | === RUN START ===
+2026-06-20 17:26:34 | INFO | P06 | project=P06
+2026-06-20 17:26:34 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:26:34 | INFO | P06 | python=3.14.0
+2026-06-20 17:26:34 | INFO | P06 | os=Windows 11
+2026-06-20 17:26:34 | INFO | P06 | shell=powershell
+2026-06-20 17:26:34 | INFO | P06 | cwd=.
+2026-06-20 17:26:34 | INFO | P06 | github_actions=False
+2026-06-20 17:26:34 | INFO | P06 | === RUN START ===
+2026-06-20 17:26:34 | INFO | P06 | project=P06
+2026-06-20 17:26:34 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:26:34 | INFO | P06 | python=3.14.0
+2026-06-20 17:26:34 | INFO | P06 | os=Windows 11
+2026-06-20 17:26:34 | INFO | P06 | shell=powershell
+2026-06-20 17:26:34 | INFO | P06 | cwd=.
+2026-06-20 17:26:34 | INFO | P06 | github_actions=False
+2026-06-20 17:26:34 | INFO | P06 | === RUN START ===
+2026-06-20 17:26:34 | INFO | P06 | project=EDA
+2026-06-20 17:26:34 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:26:34 | INFO | P06 | python=3.14.0
+2026-06-20 17:26:34 | INFO | P06 | os=Windows 11
+2026-06-20 17:26:34 | INFO | P06 | shell=powershell
+2026-06-20 17:26:34 | INFO | P06 | cwd=.
+2026-06-20 17:26:34 | INFO | P06 | github_actions=False
+2026-06-20 17:26:34 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:26:34 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:26:34 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:26:34 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:26:34 | INFO | P06 | Column names
+2026-06-20 17:26:34 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:26:34 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:26:34 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:26:34 | INFO | P06 | After dropping NA values: 82 rows, 9 columns
+2026-06-20 17:26:34 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:26:34 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                            Employment   object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:27:16 | INFO | P06 | === RUN START ===
+2026-06-20 17:27:16 | INFO | P06 | project=P06
+2026-06-20 17:27:16 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:27:16 | INFO | P06 | python=3.14.0
+2026-06-20 17:27:16 | INFO | P06 | os=Windows 11
+2026-06-20 17:27:16 | INFO | P06 | shell=powershell
+2026-06-20 17:27:16 | INFO | P06 | cwd=.
+2026-06-20 17:27:16 | INFO | P06 | github_actions=False
+2026-06-20 17:27:16 | INFO | P06 | === RUN START ===
+2026-06-20 17:27:16 | INFO | P06 | project=P06
+2026-06-20 17:27:16 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:27:16 | INFO | P06 | python=3.14.0
+2026-06-20 17:27:16 | INFO | P06 | os=Windows 11
+2026-06-20 17:27:16 | INFO | P06 | shell=powershell
+2026-06-20 17:27:16 | INFO | P06 | cwd=.
+2026-06-20 17:27:16 | INFO | P06 | github_actions=False
+2026-06-20 17:27:16 | INFO | P06 | === RUN START ===
+2026-06-20 17:27:16 | INFO | P06 | project=EDA
+2026-06-20 17:27:16 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:27:16 | INFO | P06 | python=3.14.0
+2026-06-20 17:27:16 | INFO | P06 | os=Windows 11
+2026-06-20 17:27:16 | INFO | P06 | shell=powershell
+2026-06-20 17:27:16 | INFO | P06 | cwd=.
+2026-06-20 17:27:16 | INFO | P06 | github_actions=False
+2026-06-20 17:27:16 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:27:16 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:27:16 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:27:16 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:27:16 | INFO | P06 | Column names
+2026-06-20 17:27:16 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:27:16 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:27:16 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:28:04 | INFO | P06 | === RUN START ===
+2026-06-20 17:28:04 | INFO | P06 | project=P06
+2026-06-20 17:28:04 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:28:04 | INFO | P06 | python=3.14.0
+2026-06-20 17:28:04 | INFO | P06 | os=Windows 11
+2026-06-20 17:28:04 | INFO | P06 | shell=powershell
+2026-06-20 17:28:04 | INFO | P06 | cwd=.
+2026-06-20 17:28:04 | INFO | P06 | github_actions=False
+2026-06-20 17:28:04 | INFO | P06 | === RUN START ===
+2026-06-20 17:28:04 | INFO | P06 | project=P06
+2026-06-20 17:28:04 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:28:04 | INFO | P06 | python=3.14.0
+2026-06-20 17:28:04 | INFO | P06 | os=Windows 11
+2026-06-20 17:28:04 | INFO | P06 | shell=powershell
+2026-06-20 17:28:04 | INFO | P06 | cwd=.
+2026-06-20 17:28:04 | INFO | P06 | github_actions=False
+2026-06-20 17:28:04 | INFO | P06 | === RUN START ===
+2026-06-20 17:28:04 | INFO | P06 | project=EDA
+2026-06-20 17:28:04 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:28:04 | INFO | P06 | python=3.14.0
+2026-06-20 17:28:04 | INFO | P06 | os=Windows 11
+2026-06-20 17:28:04 | INFO | P06 | shell=powershell
+2026-06-20 17:28:04 | INFO | P06 | cwd=.
+2026-06-20 17:28:04 | INFO | P06 | github_actions=False
+2026-06-20 17:28:04 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:28:05 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:28:05 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:28:05 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:28:05 | INFO | P06 | Column names
+2026-06-20 17:28:05 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:28:05 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:28:05 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:28:05 | INFO | P06 | After dropping NA values: 82 rows, 9 columns
+2026-06-20 17:28:05 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:28:05 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                            Employment   object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:28:40 | INFO | P06 | === RUN START ===
+2026-06-20 17:28:40 | INFO | P06 | project=P06
+2026-06-20 17:28:40 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:28:40 | INFO | P06 | python=3.14.0
+2026-06-20 17:28:40 | INFO | P06 | os=Windows 11
+2026-06-20 17:28:40 | INFO | P06 | shell=powershell
+2026-06-20 17:28:40 | INFO | P06 | cwd=.
+2026-06-20 17:28:40 | INFO | P06 | github_actions=False
+2026-06-20 17:28:40 | INFO | P06 | === RUN START ===
+2026-06-20 17:28:40 | INFO | P06 | project=P06
+2026-06-20 17:28:40 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:28:40 | INFO | P06 | python=3.14.0
+2026-06-20 17:28:40 | INFO | P06 | os=Windows 11
+2026-06-20 17:28:40 | INFO | P06 | shell=powershell
+2026-06-20 17:28:40 | INFO | P06 | cwd=.
+2026-06-20 17:28:40 | INFO | P06 | github_actions=False
+2026-06-20 17:28:40 | INFO | P06 | === RUN START ===
+2026-06-20 17:28:40 | INFO | P06 | project=EDA
+2026-06-20 17:28:40 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:28:40 | INFO | P06 | python=3.14.0
+2026-06-20 17:28:40 | INFO | P06 | os=Windows 11
+2026-06-20 17:28:40 | INFO | P06 | shell=powershell
+2026-06-20 17:28:40 | INFO | P06 | cwd=.
+2026-06-20 17:28:40 | INFO | P06 | github_actions=False
+2026-06-20 17:28:40 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:28:40 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:28:40 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:28:40 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:28:40 | INFO | P06 | Column names
+2026-06-20 17:28:40 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:28:40 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:28:40 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:29:02 | INFO | P06 | === RUN START ===
+2026-06-20 17:29:02 | INFO | P06 | project=P06
+2026-06-20 17:29:02 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:29:02 | INFO | P06 | python=3.14.0
+2026-06-20 17:29:02 | INFO | P06 | os=Windows 11
+2026-06-20 17:29:02 | INFO | P06 | shell=powershell
+2026-06-20 17:29:02 | INFO | P06 | cwd=.
+2026-06-20 17:29:02 | INFO | P06 | github_actions=False
+2026-06-20 17:29:02 | INFO | P06 | === RUN START ===
+2026-06-20 17:29:02 | INFO | P06 | project=P06
+2026-06-20 17:29:02 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:29:02 | INFO | P06 | python=3.14.0
+2026-06-20 17:29:02 | INFO | P06 | os=Windows 11
+2026-06-20 17:29:02 | INFO | P06 | shell=powershell
+2026-06-20 17:29:02 | INFO | P06 | cwd=.
+2026-06-20 17:29:02 | INFO | P06 | github_actions=False
+2026-06-20 17:29:02 | INFO | P06 | === RUN START ===
+2026-06-20 17:29:02 | INFO | P06 | project=EDA
+2026-06-20 17:29:02 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:29:02 | INFO | P06 | python=3.14.0
+2026-06-20 17:29:02 | INFO | P06 | os=Windows 11
+2026-06-20 17:29:02 | INFO | P06 | shell=powershell
+2026-06-20 17:29:02 | INFO | P06 | cwd=.
+2026-06-20 17:29:02 | INFO | P06 | github_actions=False
+2026-06-20 17:29:02 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:29:02 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:29:02 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:29:02 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:29:02 | INFO | P06 | Column names
+2026-06-20 17:29:02 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:29:02 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:29:02 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:29:39 | INFO | P06 | === RUN START ===
+2026-06-20 17:29:39 | INFO | P06 | project=P06
+2026-06-20 17:29:39 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:29:39 | INFO | P06 | python=3.14.0
+2026-06-20 17:29:39 | INFO | P06 | os=Windows 11
+2026-06-20 17:29:39 | INFO | P06 | shell=powershell
+2026-06-20 17:29:39 | INFO | P06 | cwd=.
+2026-06-20 17:29:39 | INFO | P06 | github_actions=False
+2026-06-20 17:29:39 | INFO | P06 | === RUN START ===
+2026-06-20 17:29:39 | INFO | P06 | project=P06
+2026-06-20 17:29:39 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:29:39 | INFO | P06 | python=3.14.0
+2026-06-20 17:29:39 | INFO | P06 | os=Windows 11
+2026-06-20 17:29:39 | INFO | P06 | shell=powershell
+2026-06-20 17:29:39 | INFO | P06 | cwd=.
+2026-06-20 17:29:39 | INFO | P06 | github_actions=False
+2026-06-20 17:29:39 | INFO | P06 | === RUN START ===
+2026-06-20 17:29:39 | INFO | P06 | project=EDA
+2026-06-20 17:29:39 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:29:39 | INFO | P06 | python=3.14.0
+2026-06-20 17:29:39 | INFO | P06 | os=Windows 11
+2026-06-20 17:29:39 | INFO | P06 | shell=powershell
+2026-06-20 17:29:39 | INFO | P06 | cwd=.
+2026-06-20 17:29:39 | INFO | P06 | github_actions=False
+2026-06-20 17:29:39 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:29:39 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:29:39 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:29:39 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:29:39 | INFO | P06 | Column names
+2026-06-20 17:29:39 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:29:39 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:29:39 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:31:02 | INFO | P06 | === RUN START ===
+2026-06-20 17:31:02 | INFO | P06 | project=P06
+2026-06-20 17:31:02 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:31:02 | INFO | P06 | python=3.14.0
+2026-06-20 17:31:02 | INFO | P06 | os=Windows 11
+2026-06-20 17:31:02 | INFO | P06 | shell=powershell
+2026-06-20 17:31:02 | INFO | P06 | cwd=.
+2026-06-20 17:31:02 | INFO | P06 | github_actions=False
+2026-06-20 17:31:02 | INFO | P06 | === RUN START ===
+2026-06-20 17:31:02 | INFO | P06 | project=P06
+2026-06-20 17:31:02 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:31:02 | INFO | P06 | python=3.14.0
+2026-06-20 17:31:02 | INFO | P06 | os=Windows 11
+2026-06-20 17:31:02 | INFO | P06 | shell=powershell
+2026-06-20 17:31:02 | INFO | P06 | cwd=.
+2026-06-20 17:31:02 | INFO | P06 | github_actions=False
+2026-06-20 17:31:02 | INFO | P06 | === RUN START ===
+2026-06-20 17:31:02 | INFO | P06 | project=EDA
+2026-06-20 17:31:02 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:31:02 | INFO | P06 | python=3.14.0
+2026-06-20 17:31:02 | INFO | P06 | os=Windows 11
+2026-06-20 17:31:02 | INFO | P06 | shell=powershell
+2026-06-20 17:31:02 | INFO | P06 | cwd=.
+2026-06-20 17:31:02 | INFO | P06 | github_actions=False
+2026-06-20 17:31:02 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:31:03 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:31:03 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:31:03 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:31:03 | INFO | P06 | Column names
+2026-06-20 17:31:03 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:31:03 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:31:03 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:32:22 | INFO | P06 | === RUN START ===
+2026-06-20 17:32:22 | INFO | P06 | project=P06
+2026-06-20 17:32:22 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:32:22 | INFO | P06 | python=3.14.0
+2026-06-20 17:32:22 | INFO | P06 | os=Windows 11
+2026-06-20 17:32:22 | INFO | P06 | shell=powershell
+2026-06-20 17:32:22 | INFO | P06 | cwd=.
+2026-06-20 17:32:22 | INFO | P06 | github_actions=False
+2026-06-20 17:32:22 | INFO | P06 | === RUN START ===
+2026-06-20 17:32:22 | INFO | P06 | project=P06
+2026-06-20 17:32:22 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:32:22 | INFO | P06 | python=3.14.0
+2026-06-20 17:32:22 | INFO | P06 | os=Windows 11
+2026-06-20 17:32:22 | INFO | P06 | shell=powershell
+2026-06-20 17:32:22 | INFO | P06 | cwd=.
+2026-06-20 17:32:22 | INFO | P06 | github_actions=False
+2026-06-20 17:32:22 | INFO | P06 | === RUN START ===
+2026-06-20 17:32:22 | INFO | P06 | project=EDA
+2026-06-20 17:32:22 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:32:22 | INFO | P06 | python=3.14.0
+2026-06-20 17:32:22 | INFO | P06 | os=Windows 11
+2026-06-20 17:32:22 | INFO | P06 | shell=powershell
+2026-06-20 17:32:22 | INFO | P06 | cwd=.
+2026-06-20 17:32:22 | INFO | P06 | github_actions=False
+2026-06-20 17:32:22 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:32:22 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:32:22 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-20 17:32:22 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:32:22 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:32:22 | INFO | P06 | Column names
+2026-06-20 17:32:22 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:32:22 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:32:22 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:32:22 | INFO | P06 | After dropping NA values: 82 rows, 9 columns
+2026-06-20 17:32:22 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:32:22 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                            Employment   object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:37:17 | INFO | P06 | === RUN START ===
+2026-06-20 17:37:17 | INFO | P06 | project=P06
+2026-06-20 17:37:17 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:37:17 | INFO | P06 | python=3.14.0
+2026-06-20 17:37:17 | INFO | P06 | os=Windows 11
+2026-06-20 17:37:17 | INFO | P06 | shell=powershell
+2026-06-20 17:37:17 | INFO | P06 | cwd=.
+2026-06-20 17:37:17 | INFO | P06 | github_actions=False
+2026-06-20 17:37:17 | INFO | P06 | === RUN START ===
+2026-06-20 17:37:17 | INFO | P06 | project=P06
+2026-06-20 17:37:17 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:37:17 | INFO | P06 | python=3.14.0
+2026-06-20 17:37:17 | INFO | P06 | os=Windows 11
+2026-06-20 17:37:17 | INFO | P06 | shell=powershell
+2026-06-20 17:37:17 | INFO | P06 | cwd=.
+2026-06-20 17:37:17 | INFO | P06 | github_actions=False
+2026-06-20 17:37:17 | INFO | P06 | === RUN START ===
+2026-06-20 17:37:17 | INFO | P06 | project=EDA
+2026-06-20 17:37:17 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:37:17 | INFO | P06 | python=3.14.0
+2026-06-20 17:37:17 | INFO | P06 | os=Windows 11
+2026-06-20 17:37:17 | INFO | P06 | shell=powershell
+2026-06-20 17:37:17 | INFO | P06 | cwd=.
+2026-06-20 17:37:17 | INFO | P06 | github_actions=False
+2026-06-20 17:37:17 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:37:18 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:37:18 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-20 17:37:18 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:37:18 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:37:18 | INFO | P06 | Column names
+2026-06-20 17:37:18 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:37:18 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:37:18 | INFO | P06 | Dataset shape: 82 rows, 9 columns
+2026-06-20 17:37:18 | INFO | P06 | After dropping NA values: 82 rows, 9 columns
+2026-06-20 17:37:18 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:37:18 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                            Employment   object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:42:45 | INFO | P06 | === RUN START ===
+2026-06-20 17:42:45 | INFO | P06 | project=P06
+2026-06-20 17:42:46 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:42:46 | INFO | P06 | python=3.14.0
+2026-06-20 17:42:46 | INFO | P06 | os=Windows 11
+2026-06-20 17:42:46 | INFO | P06 | shell=powershell
+2026-06-20 17:42:46 | INFO | P06 | cwd=.
+2026-06-20 17:42:46 | INFO | P06 | github_actions=False
+2026-06-20 17:42:46 | INFO | P06 | === RUN START ===
+2026-06-20 17:42:46 | INFO | P06 | project=P06
+2026-06-20 17:42:46 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:42:46 | INFO | P06 | python=3.14.0
+2026-06-20 17:42:46 | INFO | P06 | os=Windows 11
+2026-06-20 17:42:46 | INFO | P06 | shell=powershell
+2026-06-20 17:42:46 | INFO | P06 | cwd=.
+2026-06-20 17:42:46 | INFO | P06 | github_actions=False
+2026-06-20 17:42:46 | INFO | P06 | === RUN START ===
+2026-06-20 17:42:46 | INFO | P06 | project=EDA
+2026-06-20 17:42:46 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:42:46 | INFO | P06 | python=3.14.0
+2026-06-20 17:42:46 | INFO | P06 | os=Windows 11
+2026-06-20 17:42:46 | INFO | P06 | shell=powershell
+2026-06-20 17:42:46 | INFO | P06 | cwd=.
+2026-06-20 17:42:46 | INFO | P06 | github_actions=False
+2026-06-20 17:42:46 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-20 17:42:46 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-20 17:42:46 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-20 17:42:46 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-20 17:42:46 | DEBUG | P06 | 
+                            Area                                           Industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          Occupation Employment  Hourly mean wage  Annual mean wage  \
+0                Computer Systems Analysts (15-1211)       4200             49.78            103540   
+1            Information Security Analysts (15-1212)       1890             61.79            128530   
+2  Computer and Information Research Scientists (...        250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)       1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)       7470             29.07             60460   
+
+   Wage percent relative standard error  Annual median wage Location Quotient  
+0                                   1.9              100780              0.89  
+1                                   1.4              129440              1.09  
+2                                   6.5              116470              0.73  
+3                                   2.3               63460              1.08  
+4                                   1.3               54430              1.15  
+2026-06-20 17:42:46 | INFO | P06 | Column names
+2026-06-20 17:42:46 | DEBUG | P06 | ['Area', 'Industry', 'Occupation', 'Employment', 'Hourly mean wage', 'Annual mean wage', 'Wage percent relative standard error', 'Annual median wage', 'Location Quotient']
+2026-06-20 17:42:46 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-20 17:42:46 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-20 17:42:46 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-20 17:42:46 | INFO | P06 | Building starter data dictionary
+2026-06-20 17:42:46 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  Area      str              0          0.0
+1                              Industry      str              0          0.0
+2                            Occupation      str              0          0.0
+3                            Employment   object              0          0.0
+4                      Hourly mean wage  float64              0          0.0
+5                      Annual mean wage    int64              0          0.0
+6  Wage percent relative standard error  float64              0          0.0
+7                    Annual median wage    int64              0          0.0
+8                     Location Quotient   object              0          0.0
+2026-06-20 17:45:11 | INFO | P06 | === RUN START ===
+2026-06-20 17:45:11 | INFO | P06 | project=P06
+2026-06-20 17:45:11 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-20 17:45:11 | INFO | P06 | python=3.14.0
+2026-06-20 17:45:11 | INFO | P06 | os=Windows 11
+2026-06-20 17:45:11 | INFO | P06 | shell=powershell
+2026-06-20 17:45:11 | INFO | P06 | cwd=.
+2026-06-20 17:45:11 | INFO | P06 | github_actions=False
