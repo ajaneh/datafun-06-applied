@@ -90,8 +90,11 @@ uvx pre-commit run --all-files
 
 # run the example module and verify the environment (.venv/)
 uv run python -m datafun.app_case
+uv run python -m datafun.app_alex
 
 # do chores
+uv run ruff format .                                                                                             
+uv run ruff check . --fix
 uv run python -m pyright
 uv run python -m pytest
 uv run python -m zensical build
@@ -124,11 +127,10 @@ Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 TODO
 
-![Correlation Heatmap](./docs/images/Figure_1.png)
+![IT Career Wages](https://github.com/ajaneh/datafun-06-applied/blob/main/artifacts/bar_plot_example.png?raw=true))
 
-![Provide a Useful Caption](./docs/images/Figure_2.png)
+![IT Employment Opportunities](https://github.com/ajaneh/datafun-06-applied/blob/main/artifacts/bar_plot_jobs_available.png?raw=true)
 
-![Provide a Useful Caption](./docs/images/Figure_3.png)
 
 ## Project Documentation
 
