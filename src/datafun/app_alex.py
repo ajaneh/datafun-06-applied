@@ -109,7 +109,7 @@ def bar_plot_example(
 def narrow_down_top_occupations(df_clean: pd.DataFrame) -> pd.DataFrame:
     # Let's narrow it down to the top 4 occupations by employment in the area with the highest annual mean wage,
     # then plot a bar chart comparing annual median wage and employment for those top 4 occupations.
-    top_area: str = df_clean.groupby(GROUP_COL)[EXAMPLE_NUMERIC_COL].mean().idxmax()
+    top_area: str = df_clean.groupby(GROUP_COL)[EXAMPLE_NUMERIC_COL].mean().idxmax()  # type: ignore
     LOG.info(f"\nArea with highest {EXAMPLE_NUMERIC_COL}: {top_area}")
     df_top_area: pd.DataFrame = df_clean[df_clean[GROUP_COL] == top_area]
     top_occupations: pd.Series = (

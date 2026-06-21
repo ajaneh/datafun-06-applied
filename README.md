@@ -93,7 +93,7 @@ uv run python -m datafun.app_case
 uv run python -m datafun.app_alex
 
 # do chores
-uv run ruff format .                                                                                             
+uv run ruff format .  
 uv run ruff check . --fix
 uv run python -m pyright
 uv run python -m pytest

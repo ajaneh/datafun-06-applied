@@ -5157,3 +5157,11 @@ Area with highest annual mean wage: Tampa-St. Petersburg-Clearwater, FL
 2026-06-21 14:46:13 | INFO | P06 | shell=powershell
 2026-06-21 14:46:13 | INFO | P06 | cwd=.
 2026-06-21 14:46:13 | INFO | P06 | github_actions=False
+2026-06-21 14:51:10 | INFO | P06 | === RUN START ===
+2026-06-21 14:51:10 | INFO | P06 | project=P06
+2026-06-21 14:51:10 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 14:51:10 | INFO | P06 | python=3.14.0
+2026-06-21 14:51:10 | INFO | P06 | os=Windows 11
+2026-06-21 14:51:10 | INFO | P06 | shell=powershell
+2026-06-21 14:51:10 | INFO | P06 | cwd=.
+2026-06-21 14:51:10 | INFO | P06 | github_actions=False
