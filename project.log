@@ -5165,3 +5165,924 @@ Area with highest annual mean wage: Tampa-St. Petersburg-Clearwater, FL
 2026-06-21 14:51:10 | INFO | P06 | shell=powershell
 2026-06-21 14:51:10 | INFO | P06 | cwd=.
 2026-06-21 14:51:10 | INFO | P06 | github_actions=False
+2026-06-21 16:10:33 | INFO | P06 | === RUN START ===
+2026-06-21 16:10:33 | INFO | P06 | project=P06
+2026-06-21 16:10:33 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:10:33 | INFO | P06 | python=3.14.0
+2026-06-21 16:10:33 | INFO | P06 | os=Windows 11
+2026-06-21 16:10:33 | INFO | P06 | shell=powershell
+2026-06-21 16:10:33 | INFO | P06 | cwd=.
+2026-06-21 16:10:33 | INFO | P06 | github_actions=False
+2026-06-21 16:10:33 | INFO | P06 | === RUN START ===
+2026-06-21 16:10:33 | INFO | P06 | project=P06
+2026-06-21 16:10:33 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:10:33 | INFO | P06 | python=3.14.0
+2026-06-21 16:10:33 | INFO | P06 | os=Windows 11
+2026-06-21 16:10:33 | INFO | P06 | shell=powershell
+2026-06-21 16:10:33 | INFO | P06 | cwd=.
+2026-06-21 16:10:33 | INFO | P06 | github_actions=False
+2026-06-21 16:10:33 | INFO | P06 | === RUN START ===
+2026-06-21 16:10:33 | INFO | P06 | project=EDA
+2026-06-21 16:10:33 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:10:33 | INFO | P06 | python=3.14.0
+2026-06-21 16:10:33 | INFO | P06 | os=Windows 11
+2026-06-21 16:10:33 | INFO | P06 | shell=powershell
+2026-06-21 16:10:33 | INFO | P06 | cwd=.
+2026-06-21 16:10:33 | INFO | P06 | github_actions=False
+2026-06-21 16:10:33 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-21 16:10:33 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-21 16:10:33 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-21 16:10:33 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-21 16:10:33 | INFO | P06 | Initial column names:
+2026-06-21 16:10:33 | INFO | P06 |   - Area
+2026-06-21 16:10:33 | INFO | P06 |   - Industry
+2026-06-21 16:10:33 | INFO | P06 |   - Occupation
+2026-06-21 16:10:33 | INFO | P06 |   - Employment
+2026-06-21 16:10:33 | INFO | P06 |   - Hourly mean wage
+2026-06-21 16:10:33 | INFO | P06 |   - Annual mean wage
+2026-06-21 16:10:33 | INFO | P06 |   - Wage percent relative standard error
+2026-06-21 16:10:33 | INFO | P06 |   - Annual median wage
+2026-06-21 16:10:33 | INFO | P06 |   - Location Quotient
+2026-06-21 16:10:33 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-21 16:10:33 | INFO | P06 |   - area
+2026-06-21 16:10:33 | INFO | P06 |   - industry
+2026-06-21 16:10:33 | INFO | P06 |   - occupation
+2026-06-21 16:10:33 | INFO | P06 |   - employment
+2026-06-21 16:10:33 | INFO | P06 |   - hourly mean wage
+2026-06-21 16:10:33 | INFO | P06 |   - annual mean wage
+2026-06-21 16:10:33 | INFO | P06 |   - wage percent relative standard error
+2026-06-21 16:10:33 | INFO | P06 |   - annual median wage
+2026-06-21 16:10:33 | INFO | P06 |   - location quotient
+2026-06-21 16:10:33 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-21 16:10:33 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-21 16:10:33 | INFO | P06 | Building starter data dictionary
+2026-06-21 16:10:33 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-21 16:10:34 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-21 16:10:34 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-21 16:10:34 | INFO | P06 | Column names
+2026-06-21 16:10:34 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-21 16:10:34 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-21 16:10:34 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-21 16:10:34 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-21 16:10:34 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-21 16:10:34 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-21 16:10:34 | DEBUG | P06 |   Mean: 100222.78
+2026-06-21 16:10:34 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-21 16:10:34 | DEBUG | P06 |   Min: 51400.00
+2026-06-21 16:10:34 | DEBUG | P06 |   Max: 156700.00
+2026-06-21 16:10:34 | DEBUG | P06 |   Range: 105300.00
+2026-06-21 16:10:34 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-21 16:10:34 | INFO | P06 | Computing overall descriptive statistics
+2026-06-21 16:10:34 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-21 16:10:34 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-21 16:10:34 | INFO | P06 | Computing descriptive statistics by group
+2026-06-21 16:10:34 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-21 16:10:34 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-21 16:10:34 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-21 16:10:34 | INFO | P06 | 
+Correlation matrix:
+2026-06-21 16:10:34 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-21 16:10:34 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-21 16:10:37 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Petersburg-Clearwater, FL
+2026-06-21 16:12:03 | INFO | P06 | === RUN START ===
+2026-06-21 16:12:03 | INFO | P06 | project=P06
+2026-06-21 16:12:03 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:12:03 | INFO | P06 | python=3.14.0
+2026-06-21 16:12:03 | INFO | P06 | os=Windows 11
+2026-06-21 16:12:03 | INFO | P06 | shell=powershell
+2026-06-21 16:12:03 | INFO | P06 | cwd=.
+2026-06-21 16:12:03 | INFO | P06 | github_actions=False
+2026-06-21 16:12:03 | INFO | P06 | === RUN START ===
+2026-06-21 16:12:03 | INFO | P06 | project=P06
+2026-06-21 16:12:03 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:12:03 | INFO | P06 | python=3.14.0
+2026-06-21 16:12:03 | INFO | P06 | os=Windows 11
+2026-06-21 16:12:03 | INFO | P06 | shell=powershell
+2026-06-21 16:12:03 | INFO | P06 | cwd=.
+2026-06-21 16:12:03 | INFO | P06 | github_actions=False
+2026-06-21 16:12:03 | INFO | P06 | === RUN START ===
+2026-06-21 16:12:03 | INFO | P06 | project=EDA
+2026-06-21 16:12:03 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:12:03 | INFO | P06 | python=3.14.0
+2026-06-21 16:12:03 | INFO | P06 | os=Windows 11
+2026-06-21 16:12:03 | INFO | P06 | shell=powershell
+2026-06-21 16:12:03 | INFO | P06 | cwd=.
+2026-06-21 16:12:03 | INFO | P06 | github_actions=False
+2026-06-21 16:12:03 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-21 16:12:04 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-21 16:12:04 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-21 16:12:04 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-21 16:12:04 | INFO | P06 | Initial column names:
+2026-06-21 16:12:04 | INFO | P06 |   - Area
+2026-06-21 16:12:04 | INFO | P06 |   - Industry
+2026-06-21 16:12:04 | INFO | P06 |   - Occupation
+2026-06-21 16:12:04 | INFO | P06 |   - Employment
+2026-06-21 16:12:04 | INFO | P06 |   - Hourly mean wage
+2026-06-21 16:12:04 | INFO | P06 |   - Annual mean wage
+2026-06-21 16:12:04 | INFO | P06 |   - Wage percent relative standard error
+2026-06-21 16:12:04 | INFO | P06 |   - Annual median wage
+2026-06-21 16:12:04 | INFO | P06 |   - Location Quotient
+2026-06-21 16:12:04 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-21 16:12:04 | INFO | P06 |   - area
+2026-06-21 16:12:04 | INFO | P06 |   - industry
+2026-06-21 16:12:04 | INFO | P06 |   - occupation
+2026-06-21 16:12:04 | INFO | P06 |   - employment
+2026-06-21 16:12:04 | INFO | P06 |   - hourly mean wage
+2026-06-21 16:12:04 | INFO | P06 |   - annual mean wage
+2026-06-21 16:12:04 | INFO | P06 |   - wage percent relative standard error
+2026-06-21 16:12:04 | INFO | P06 |   - annual median wage
+2026-06-21 16:12:04 | INFO | P06 |   - location quotient
+2026-06-21 16:12:04 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-21 16:12:04 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-21 16:12:04 | INFO | P06 | Building starter data dictionary
+2026-06-21 16:12:04 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-21 16:12:04 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-21 16:12:04 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-21 16:12:04 | INFO | P06 | Column names
+2026-06-21 16:12:04 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-21 16:12:04 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-21 16:12:04 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-21 16:12:04 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-21 16:12:04 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-21 16:12:04 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-21 16:12:04 | DEBUG | P06 |   Mean: 100222.78
+2026-06-21 16:12:04 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-21 16:12:04 | DEBUG | P06 |   Min: 51400.00
+2026-06-21 16:12:04 | DEBUG | P06 |   Max: 156700.00
+2026-06-21 16:12:04 | DEBUG | P06 |   Range: 105300.00
+2026-06-21 16:12:04 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-21 16:12:04 | INFO | P06 | Computing overall descriptive statistics
+2026-06-21 16:12:04 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-21 16:12:04 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-21 16:12:04 | INFO | P06 | Computing descriptive statistics by group
+2026-06-21 16:12:04 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-21 16:12:04 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-21 16:12:04 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-21 16:12:04 | INFO | P06 | 
+Correlation matrix:
+2026-06-21 16:12:04 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-21 16:12:04 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-21 16:12:07 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Petersburg-Clearwater, FL
+2026-06-21 16:18:43 | INFO | P06 | === RUN START ===
+2026-06-21 16:18:43 | INFO | P06 | project=P06
+2026-06-21 16:18:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:18:43 | INFO | P06 | python=3.14.0
+2026-06-21 16:18:43 | INFO | P06 | os=Windows 11
+2026-06-21 16:18:43 | INFO | P06 | shell=powershell
+2026-06-21 16:18:43 | INFO | P06 | cwd=.
+2026-06-21 16:18:43 | INFO | P06 | github_actions=False
+2026-06-21 16:18:43 | INFO | P06 | === RUN START ===
+2026-06-21 16:18:43 | INFO | P06 | project=P06
+2026-06-21 16:18:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:18:43 | INFO | P06 | python=3.14.0
+2026-06-21 16:18:43 | INFO | P06 | os=Windows 11
+2026-06-21 16:18:43 | INFO | P06 | shell=powershell
+2026-06-21 16:18:43 | INFO | P06 | cwd=.
+2026-06-21 16:18:43 | INFO | P06 | github_actions=False
+2026-06-21 16:18:43 | INFO | P06 | === RUN START ===
+2026-06-21 16:18:43 | INFO | P06 | project=EDA
+2026-06-21 16:18:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:18:43 | INFO | P06 | python=3.14.0
+2026-06-21 16:18:43 | INFO | P06 | os=Windows 11
+2026-06-21 16:18:43 | INFO | P06 | shell=powershell
+2026-06-21 16:18:43 | INFO | P06 | cwd=.
+2026-06-21 16:18:43 | INFO | P06 | github_actions=False
+2026-06-21 16:18:43 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-21 16:18:43 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-21 16:18:43 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-21 16:18:43 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-21 16:18:43 | INFO | P06 | Initial column names:
+2026-06-21 16:18:43 | INFO | P06 |   - Area
+2026-06-21 16:18:43 | INFO | P06 |   - Industry
+2026-06-21 16:18:43 | INFO | P06 |   - Occupation
+2026-06-21 16:18:43 | INFO | P06 |   - Employment
+2026-06-21 16:18:43 | INFO | P06 |   - Hourly mean wage
+2026-06-21 16:18:43 | INFO | P06 |   - Annual mean wage
+2026-06-21 16:18:43 | INFO | P06 |   - Wage percent relative standard error
+2026-06-21 16:18:43 | INFO | P06 |   - Annual median wage
+2026-06-21 16:18:43 | INFO | P06 |   - Location Quotient
+2026-06-21 16:18:43 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-21 16:18:43 | INFO | P06 |   - area
+2026-06-21 16:18:43 | INFO | P06 |   - industry
+2026-06-21 16:18:43 | INFO | P06 |   - occupation
+2026-06-21 16:18:43 | INFO | P06 |   - employment
+2026-06-21 16:18:43 | INFO | P06 |   - hourly mean wage
+2026-06-21 16:18:43 | INFO | P06 |   - annual mean wage
+2026-06-21 16:18:43 | INFO | P06 |   - wage percent relative standard error
+2026-06-21 16:18:43 | INFO | P06 |   - annual median wage
+2026-06-21 16:18:43 | INFO | P06 |   - location quotient
+2026-06-21 16:18:43 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-21 16:18:43 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-21 16:18:43 | INFO | P06 | Building starter data dictionary
+2026-06-21 16:18:43 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-21 16:18:43 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-21 16:18:43 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-21 16:18:43 | INFO | P06 | Column names
+2026-06-21 16:18:43 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-21 16:18:43 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-21 16:18:43 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-21 16:18:43 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-21 16:18:43 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-21 16:18:43 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-21 16:18:43 | DEBUG | P06 |   Mean: 100222.78
+2026-06-21 16:18:43 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-21 16:18:43 | DEBUG | P06 |   Min: 51400.00
+2026-06-21 16:18:43 | DEBUG | P06 |   Max: 156700.00
+2026-06-21 16:18:43 | DEBUG | P06 |   Range: 105300.00
+2026-06-21 16:18:43 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-21 16:18:43 | INFO | P06 | Computing overall descriptive statistics
+2026-06-21 16:18:43 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-21 16:18:43 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-21 16:18:43 | INFO | P06 | Computing descriptive statistics by group
+2026-06-21 16:18:43 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-21 16:18:43 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-21 16:18:43 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-21 16:18:43 | INFO | P06 | 
+Correlation matrix:
+2026-06-21 16:18:43 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-21 16:18:43 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-21 16:18:46 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. 
+2026-06-21 16:18:46 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-21 16:18:46 | INFO | P06 | Empty DataFrame
+Columns: [area, industry, occupation, employment, hourly mean wage, annual mean wage, wage percent relative standard error, annual median wage, location quotient]
+Index: []
+2026-06-21 16:21:31 | INFO | P06 | === RUN START ===
+2026-06-21 16:21:31 | INFO | P06 | project=P06
+2026-06-21 16:21:31 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:21:31 | INFO | P06 | python=3.14.0
+2026-06-21 16:21:31 | INFO | P06 | os=Windows 11
+2026-06-21 16:21:31 | INFO | P06 | shell=powershell
+2026-06-21 16:21:31 | INFO | P06 | cwd=.
+2026-06-21 16:21:31 | INFO | P06 | github_actions=False
+2026-06-21 16:21:31 | INFO | P06 | === RUN START ===
+2026-06-21 16:21:31 | INFO | P06 | project=P06
+2026-06-21 16:21:31 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:21:31 | INFO | P06 | python=3.14.0
+2026-06-21 16:21:31 | INFO | P06 | os=Windows 11
+2026-06-21 16:21:31 | INFO | P06 | shell=powershell
+2026-06-21 16:21:31 | INFO | P06 | cwd=.
+2026-06-21 16:21:31 | INFO | P06 | github_actions=False
+2026-06-21 16:21:31 | INFO | P06 | === RUN START ===
+2026-06-21 16:21:31 | INFO | P06 | project=EDA
+2026-06-21 16:21:31 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:21:31 | INFO | P06 | python=3.14.0
+2026-06-21 16:21:31 | INFO | P06 | os=Windows 11
+2026-06-21 16:21:31 | INFO | P06 | shell=powershell
+2026-06-21 16:21:31 | INFO | P06 | cwd=.
+2026-06-21 16:21:31 | INFO | P06 | github_actions=False
+2026-06-21 16:21:31 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-21 16:21:32 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-21 16:21:32 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-21 16:21:32 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-21 16:21:32 | INFO | P06 | Initial column names:
+2026-06-21 16:21:32 | INFO | P06 |   - Area
+2026-06-21 16:21:32 | INFO | P06 |   - Industry
+2026-06-21 16:21:32 | INFO | P06 |   - Occupation
+2026-06-21 16:21:32 | INFO | P06 |   - Employment
+2026-06-21 16:21:32 | INFO | P06 |   - Hourly mean wage
+2026-06-21 16:21:32 | INFO | P06 |   - Annual mean wage
+2026-06-21 16:21:32 | INFO | P06 |   - Wage percent relative standard error
+2026-06-21 16:21:32 | INFO | P06 |   - Annual median wage
+2026-06-21 16:21:32 | INFO | P06 |   - Location Quotient
+2026-06-21 16:21:32 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-21 16:21:32 | INFO | P06 |   - area
+2026-06-21 16:21:32 | INFO | P06 |   - industry
+2026-06-21 16:21:32 | INFO | P06 |   - occupation
+2026-06-21 16:21:32 | INFO | P06 |   - employment
+2026-06-21 16:21:32 | INFO | P06 |   - hourly mean wage
+2026-06-21 16:21:32 | INFO | P06 |   - annual mean wage
+2026-06-21 16:21:32 | INFO | P06 |   - wage percent relative standard error
+2026-06-21 16:21:32 | INFO | P06 |   - annual median wage
+2026-06-21 16:21:32 | INFO | P06 |   - location quotient
+2026-06-21 16:21:32 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-21 16:21:32 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-21 16:21:32 | INFO | P06 | Building starter data dictionary
+2026-06-21 16:21:32 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-21 16:21:32 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-21 16:21:32 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-21 16:21:32 | INFO | P06 | Column names
+2026-06-21 16:21:32 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-21 16:21:32 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-21 16:21:32 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-21 16:21:32 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-21 16:21:32 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-21 16:21:32 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-21 16:21:32 | DEBUG | P06 |   Mean: 100222.78
+2026-06-21 16:21:32 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-21 16:21:32 | DEBUG | P06 |   Min: 51400.00
+2026-06-21 16:21:32 | DEBUG | P06 |   Max: 156700.00
+2026-06-21 16:21:32 | DEBUG | P06 |   Range: 105300.00
+2026-06-21 16:21:32 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-21 16:21:32 | INFO | P06 | Computing overall descriptive statistics
+2026-06-21 16:21:32 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-21 16:21:32 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-21 16:21:32 | INFO | P06 | Computing descriptive statistics by group
+2026-06-21 16:21:32 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-21 16:21:32 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-21 16:21:32 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-21 16:21:32 | INFO | P06 | 
+Correlation matrix:
+2026-06-21 16:21:32 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-21 16:21:32 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-21 16:21:34 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-21 16:21:35 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-21 16:21:35 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-21 16:23:13 | INFO | P06 | === RUN START ===
+2026-06-21 16:23:13 | INFO | P06 | project=P06
+2026-06-21 16:23:13 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:23:13 | INFO | P06 | python=3.14.0
+2026-06-21 16:23:13 | INFO | P06 | os=Windows 11
+2026-06-21 16:23:13 | INFO | P06 | shell=powershell
+2026-06-21 16:23:13 | INFO | P06 | cwd=.
+2026-06-21 16:23:13 | INFO | P06 | github_actions=False
+2026-06-21 16:23:13 | INFO | P06 | === RUN START ===
+2026-06-21 16:23:13 | INFO | P06 | project=P06
+2026-06-21 16:23:13 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:23:13 | INFO | P06 | python=3.14.0
+2026-06-21 16:23:13 | INFO | P06 | os=Windows 11
+2026-06-21 16:23:13 | INFO | P06 | shell=powershell
+2026-06-21 16:23:13 | INFO | P06 | cwd=.
+2026-06-21 16:23:13 | INFO | P06 | github_actions=False
+2026-06-21 16:23:13 | INFO | P06 | === RUN START ===
+2026-06-21 16:23:13 | INFO | P06 | project=EDA
+2026-06-21 16:23:13 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:23:13 | INFO | P06 | python=3.14.0
+2026-06-21 16:23:13 | INFO | P06 | os=Windows 11
+2026-06-21 16:23:13 | INFO | P06 | shell=powershell
+2026-06-21 16:23:13 | INFO | P06 | cwd=.
+2026-06-21 16:23:13 | INFO | P06 | github_actions=False
+2026-06-21 16:23:13 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-21 16:23:14 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-21 16:23:14 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-21 16:23:14 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-21 16:23:14 | INFO | P06 | Initial column names:
+2026-06-21 16:23:14 | INFO | P06 |   - Area
+2026-06-21 16:23:14 | INFO | P06 |   - Industry
+2026-06-21 16:23:14 | INFO | P06 |   - Occupation
+2026-06-21 16:23:14 | INFO | P06 |   - Employment
+2026-06-21 16:23:14 | INFO | P06 |   - Hourly mean wage
+2026-06-21 16:23:14 | INFO | P06 |   - Annual mean wage
+2026-06-21 16:23:14 | INFO | P06 |   - Wage percent relative standard error
+2026-06-21 16:23:14 | INFO | P06 |   - Annual median wage
+2026-06-21 16:23:14 | INFO | P06 |   - Location Quotient
+2026-06-21 16:23:14 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-21 16:23:14 | INFO | P06 |   - area
+2026-06-21 16:23:14 | INFO | P06 |   - industry
+2026-06-21 16:23:14 | INFO | P06 |   - occupation
+2026-06-21 16:23:14 | INFO | P06 |   - employment
+2026-06-21 16:23:14 | INFO | P06 |   - hourly mean wage
+2026-06-21 16:23:14 | INFO | P06 |   - annual mean wage
+2026-06-21 16:23:14 | INFO | P06 |   - wage percent relative standard error
+2026-06-21 16:23:14 | INFO | P06 |   - annual median wage
+2026-06-21 16:23:14 | INFO | P06 |   - location quotient
+2026-06-21 16:23:14 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-21 16:23:14 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-21 16:23:14 | INFO | P06 | Building starter data dictionary
+2026-06-21 16:23:14 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-21 16:23:14 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-21 16:23:14 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-21 16:23:14 | INFO | P06 | Column names
+2026-06-21 16:23:14 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-21 16:23:14 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-21 16:23:14 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-21 16:23:14 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-21 16:23:14 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-21 16:23:14 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-21 16:23:14 | DEBUG | P06 |   Mean: 100222.78
+2026-06-21 16:23:14 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-21 16:23:14 | DEBUG | P06 |   Min: 51400.00
+2026-06-21 16:23:14 | DEBUG | P06 |   Max: 156700.00
+2026-06-21 16:23:14 | DEBUG | P06 |   Range: 105300.00
+2026-06-21 16:23:14 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-21 16:23:14 | INFO | P06 | Computing overall descriptive statistics
+2026-06-21 16:23:14 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-21 16:23:14 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-21 16:23:14 | INFO | P06 | Computing descriptive statistics by group
+2026-06-21 16:23:14 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-21 16:23:14 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-21 16:23:14 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-21 16:23:14 | INFO | P06 | 
+Correlation matrix:
+2026-06-21 16:23:14 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-21 16:23:14 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-21 16:23:16 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-21 16:23:17 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-21 16:23:17 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-21 16:42:55 | INFO | P06 | === RUN START ===
+2026-06-21 16:42:55 | INFO | P06 | project=P06
+2026-06-21 16:42:55 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-21 16:42:55 | INFO | P06 | python=3.14.0
+2026-06-21 16:42:55 | INFO | P06 | os=Windows 11
+2026-06-21 16:42:55 | INFO | P06 | shell=powershell
+2026-06-21 16:42:55 | INFO | P06 | cwd=.
+2026-06-21 16:42:55 | INFO | P06 | github_actions=False

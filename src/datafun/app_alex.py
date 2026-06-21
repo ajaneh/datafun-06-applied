@@ -92,6 +92,17 @@ def correlation_matrix(df_clean: pd.DataFrame) -> pd.DataFrame:
     return correlation_matrix
 
 
+def shorten_column_values(
+    df: pd.DataFrame, columns: list[str], max_len: int = 10
+) -> pd.DataFrame:
+    """Shorten string values in specified columns to first max_len characters."""
+    df = df.copy()
+    for col in columns:
+        if col in df.columns:
+            df[col] = df[col].astype(str).str[:max_len]
+    return df
+
+
 def bar_plot_example(
     df: pd.DataFrame, x_value: str, y_value: str, compare_by: str, title: str
 ) -> None:
@@ -100,7 +111,8 @@ def bar_plot_example(
     barplot.set_title(title)
     barplot.set_xlabel(x_value)
     barplot.set_ylabel(y_value)
-    plt.xticks(rotation=90, ha="right")
+    plt.xticks(rotation=45, ha="right")
+    sns.set(font_scale=0.7)
     plt.tight_layout()
     plt.savefig(OUTPUT_PATH / f"{title}.png")
     plt.figure()
@@ -129,6 +141,7 @@ def occupation_focused(df: pd.DataFrame) -> pd.DataFrame:
         "Operations Research Analysts (15-2031)",
         "Computer Occupations, All Other (15-1299)",
     ]
+    preferred_occupation = [job[:15] for job in preferred_occupation]
     limited_occupation_df = df.loc[df['occupation'].isin(preferred_occupation)]
     LOG.info(limited_occupation_df)
     return limited_occupation_df
@@ -146,7 +159,9 @@ def main() -> None:
     )
     correlation_matrix(df_clean)
 
-    # I need to clean the occupation names before plotting
+    # Shorten long row names (occupation and area) for better plot readability
+    df_clean = shorten_column_values(df_clean, ["occupation", "area"], 15)
+
     bar_plot_example(
         df_clean, "occupation", "annual median wage", "area", "Wage_Per_Occupation"
     )
