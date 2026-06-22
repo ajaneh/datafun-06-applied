@@ -87,7 +87,7 @@ def correlation_matrix(df_clean: pd.DataFrame) -> pd.DataFrame:
         center=0,
     )
     heatmap.set_title("Correlation Matrix Heatmap")
-
+    plt.tight_layout()
     plt.savefig(OUTPUT_PATH / "correlation_matrix_heatmap.png")
     return correlation_matrix
 
@@ -112,7 +112,8 @@ def bar_plot_example(
     barplot.set_xlabel(x_value)
     barplot.set_ylabel(y_value)
     plt.xticks(rotation=45, ha="right")
-    sns.set(font_scale=0.7)
+    sns.set(font_scale=0.7)  # type: ignore
+    sns.move_legend(barplot, "upper left", bbox_to_anchor=(1, 1))
     plt.tight_layout()
     plt.savefig(OUTPUT_PATH / f"{title}.png")
     plt.figure()
@@ -154,13 +155,23 @@ def main() -> None:
     df_clean = custom_eda.clean_data(df)
     custom_eda.build_data_dictionary(df_clean)
     custom_eda.inspect_basic(df_clean)
-    custom_eda.descriptive_stats(
+    area_overall, area_group = custom_eda.descriptive_stats(
         df_clean, EXAMPLE_NUMERIC_COL, SELECTED_NUMERIC_COLS, GROUP_COL
     )
+    area_group.to_csv(OUTPUT_PATH / "area_group_stats.csv")
+    area_overall.to_csv(OUTPUT_PATH / "area_overall_statistics.csv")
+    overall_statistics, group_statistics = custom_eda.descriptive_stats(
+        df_clean, EXAMPLE_NUMERIC_COL, SELECTED_NUMERIC_COLS, "occupation"
+    )
+    overall_statistics.to_csv(OUTPUT_PATH / "occupation_overall_stats.csv")
+    group_statistics.to_csv(OUTPUT_PATH / "occupation_group_statistics.csv")
     correlation_matrix(df_clean)
 
     # Shorten long row names (occupation and area) for better plot readability
     df_clean = shorten_column_values(df_clean, ["occupation", "area"], 15)
+    bar_plot_example(
+        df_clean, "occupation", "location quotient", "area", "Location_Quotients"
+    )
 
     bar_plot_example(
         df_clean, "occupation", "annual median wage", "area", "Wage_Per_Occupation"

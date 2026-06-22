@@ -6086,3 +6086,1447 @@ Area with highest annual mean wage: Tampa-St. Peter
 2026-06-21 16:42:55 | INFO | P06 | shell=powershell
 2026-06-21 16:42:55 | INFO | P06 | cwd=.
 2026-06-21 16:42:55 | INFO | P06 | github_actions=False
+2026-06-22 11:42:40 | INFO | P06 | === RUN START ===
+2026-06-22 11:42:40 | INFO | P06 | project=P06
+2026-06-22 11:42:40 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:42:40 | INFO | P06 | python=3.14.0
+2026-06-22 11:42:40 | INFO | P06 | os=Windows 11
+2026-06-22 11:42:40 | INFO | P06 | shell=powershell
+2026-06-22 11:42:40 | INFO | P06 | cwd=.
+2026-06-22 11:42:40 | INFO | P06 | github_actions=False
+2026-06-22 11:42:40 | INFO | P06 | === RUN START ===
+2026-06-22 11:42:40 | INFO | P06 | project=P06
+2026-06-22 11:42:40 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:42:40 | INFO | P06 | python=3.14.0
+2026-06-22 11:42:40 | INFO | P06 | os=Windows 11
+2026-06-22 11:42:40 | INFO | P06 | shell=powershell
+2026-06-22 11:42:40 | INFO | P06 | cwd=.
+2026-06-22 11:42:40 | INFO | P06 | github_actions=False
+2026-06-22 11:42:40 | INFO | P06 | === RUN START ===
+2026-06-22 11:42:40 | INFO | P06 | project=EDA
+2026-06-22 11:42:40 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:42:40 | INFO | P06 | python=3.14.0
+2026-06-22 11:42:40 | INFO | P06 | os=Windows 11
+2026-06-22 11:42:40 | INFO | P06 | shell=powershell
+2026-06-22 11:42:40 | INFO | P06 | cwd=.
+2026-06-22 11:42:40 | INFO | P06 | github_actions=False
+2026-06-22 11:42:40 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-22 11:42:41 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-22 11:42:41 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-22 11:42:41 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-22 11:42:41 | INFO | P06 | Initial column names:
+2026-06-22 11:42:41 | INFO | P06 |   - Area
+2026-06-22 11:42:41 | INFO | P06 |   - Industry
+2026-06-22 11:42:41 | INFO | P06 |   - Occupation
+2026-06-22 11:42:41 | INFO | P06 |   - Employment
+2026-06-22 11:42:41 | INFO | P06 |   - Hourly mean wage
+2026-06-22 11:42:41 | INFO | P06 |   - Annual mean wage
+2026-06-22 11:42:41 | INFO | P06 |   - Wage percent relative standard error
+2026-06-22 11:42:41 | INFO | P06 |   - Annual median wage
+2026-06-22 11:42:41 | INFO | P06 |   - Location Quotient
+2026-06-22 11:42:41 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-22 11:42:41 | INFO | P06 |   - area
+2026-06-22 11:42:41 | INFO | P06 |   - industry
+2026-06-22 11:42:41 | INFO | P06 |   - occupation
+2026-06-22 11:42:41 | INFO | P06 |   - employment
+2026-06-22 11:42:41 | INFO | P06 |   - hourly mean wage
+2026-06-22 11:42:41 | INFO | P06 |   - annual mean wage
+2026-06-22 11:42:41 | INFO | P06 |   - wage percent relative standard error
+2026-06-22 11:42:41 | INFO | P06 |   - annual median wage
+2026-06-22 11:42:41 | INFO | P06 |   - location quotient
+2026-06-22 11:42:41 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-22 11:42:41 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-22 11:42:41 | INFO | P06 | Building starter data dictionary
+2026-06-22 11:42:41 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-22 11:42:41 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-22 11:42:41 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-22 11:42:41 | INFO | P06 | Column names
+2026-06-22 11:42:41 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-22 11:42:41 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-22 11:42:41 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-22 11:42:41 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-22 11:42:41 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 11:42:41 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 11:42:41 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 11:42:41 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 11:42:41 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 11:42:41 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 11:42:41 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 11:42:41 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 11:42:41 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 11:42:41 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 11:42:41 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 11:42:41 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 11:42:41 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-22 11:42:41 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 11:42:41 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-22 11:42:41 | INFO | P06 | 
+Correlation matrix:
+2026-06-22 11:42:41 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-22 11:42:41 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-22 11:42:45 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-22 11:42:46 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-22 11:42:46 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-22 11:45:23 | INFO | P06 | === RUN START ===
+2026-06-22 11:45:23 | INFO | P06 | project=P06
+2026-06-22 11:45:23 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:45:23 | INFO | P06 | python=3.14.0
+2026-06-22 11:45:23 | INFO | P06 | os=Windows 11
+2026-06-22 11:45:23 | INFO | P06 | shell=powershell
+2026-06-22 11:45:23 | INFO | P06 | cwd=.
+2026-06-22 11:45:23 | INFO | P06 | github_actions=False
+2026-06-22 11:45:23 | INFO | P06 | === RUN START ===
+2026-06-22 11:45:23 | INFO | P06 | project=P06
+2026-06-22 11:45:23 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:45:23 | INFO | P06 | python=3.14.0
+2026-06-22 11:45:23 | INFO | P06 | os=Windows 11
+2026-06-22 11:45:23 | INFO | P06 | shell=powershell
+2026-06-22 11:45:23 | INFO | P06 | cwd=.
+2026-06-22 11:45:23 | INFO | P06 | github_actions=False
+2026-06-22 11:45:23 | INFO | P06 | === RUN START ===
+2026-06-22 11:45:23 | INFO | P06 | project=EDA
+2026-06-22 11:45:23 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:45:23 | INFO | P06 | python=3.14.0
+2026-06-22 11:45:23 | INFO | P06 | os=Windows 11
+2026-06-22 11:45:23 | INFO | P06 | shell=powershell
+2026-06-22 11:45:23 | INFO | P06 | cwd=.
+2026-06-22 11:45:23 | INFO | P06 | github_actions=False
+2026-06-22 11:45:23 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-22 11:45:23 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-22 11:45:23 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-22 11:45:23 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-22 11:45:23 | INFO | P06 | Initial column names:
+2026-06-22 11:45:23 | INFO | P06 |   - Area
+2026-06-22 11:45:23 | INFO | P06 |   - Industry
+2026-06-22 11:45:23 | INFO | P06 |   - Occupation
+2026-06-22 11:45:23 | INFO | P06 |   - Employment
+2026-06-22 11:45:23 | INFO | P06 |   - Hourly mean wage
+2026-06-22 11:45:23 | INFO | P06 |   - Annual mean wage
+2026-06-22 11:45:23 | INFO | P06 |   - Wage percent relative standard error
+2026-06-22 11:45:23 | INFO | P06 |   - Annual median wage
+2026-06-22 11:45:23 | INFO | P06 |   - Location Quotient
+2026-06-22 11:45:23 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-22 11:45:23 | INFO | P06 |   - area
+2026-06-22 11:45:23 | INFO | P06 |   - industry
+2026-06-22 11:45:23 | INFO | P06 |   - occupation
+2026-06-22 11:45:23 | INFO | P06 |   - employment
+2026-06-22 11:45:23 | INFO | P06 |   - hourly mean wage
+2026-06-22 11:45:23 | INFO | P06 |   - annual mean wage
+2026-06-22 11:45:23 | INFO | P06 |   - wage percent relative standard error
+2026-06-22 11:45:23 | INFO | P06 |   - annual median wage
+2026-06-22 11:45:23 | INFO | P06 |   - location quotient
+2026-06-22 11:45:23 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-22 11:45:23 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-22 11:45:23 | INFO | P06 | Building starter data dictionary
+2026-06-22 11:45:23 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-22 11:45:23 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-22 11:45:23 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-22 11:45:23 | INFO | P06 | Column names
+2026-06-22 11:45:23 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-22 11:45:23 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-22 11:45:23 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-22 11:45:23 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-22 11:45:23 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 11:45:23 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 11:45:23 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 11:45:23 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 11:45:23 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 11:45:23 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 11:45:23 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 11:45:23 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 11:45:23 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 11:45:23 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 11:45:23 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 11:45:23 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 11:45:24 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-22 11:45:24 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 11:45:24 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-22 11:45:24 | INFO | P06 | 
+Correlation matrix:
+2026-06-22 11:45:24 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-22 11:45:24 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-22 11:45:28 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-22 11:45:28 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-22 11:45:28 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-22 11:51:50 | INFO | P06 | === RUN START ===
+2026-06-22 11:51:50 | INFO | P06 | project=P06
+2026-06-22 11:51:50 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:51:50 | INFO | P06 | python=3.14.0
+2026-06-22 11:51:50 | INFO | P06 | os=Windows 11
+2026-06-22 11:51:50 | INFO | P06 | shell=powershell
+2026-06-22 11:51:50 | INFO | P06 | cwd=.
+2026-06-22 11:51:50 | INFO | P06 | github_actions=False
+2026-06-22 11:51:50 | INFO | P06 | === RUN START ===
+2026-06-22 11:51:50 | INFO | P06 | project=P06
+2026-06-22 11:51:50 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:51:50 | INFO | P06 | python=3.14.0
+2026-06-22 11:51:50 | INFO | P06 | os=Windows 11
+2026-06-22 11:51:50 | INFO | P06 | shell=powershell
+2026-06-22 11:51:50 | INFO | P06 | cwd=.
+2026-06-22 11:51:50 | INFO | P06 | github_actions=False
+2026-06-22 11:51:50 | INFO | P06 | === RUN START ===
+2026-06-22 11:51:50 | INFO | P06 | project=EDA
+2026-06-22 11:51:50 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:51:50 | INFO | P06 | python=3.14.0
+2026-06-22 11:51:50 | INFO | P06 | os=Windows 11
+2026-06-22 11:51:50 | INFO | P06 | shell=powershell
+2026-06-22 11:51:50 | INFO | P06 | cwd=.
+2026-06-22 11:51:50 | INFO | P06 | github_actions=False
+2026-06-22 11:51:50 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-22 11:51:50 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-22 11:51:50 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-22 11:51:50 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-22 11:51:50 | INFO | P06 | Initial column names:
+2026-06-22 11:51:50 | INFO | P06 |   - Area
+2026-06-22 11:51:50 | INFO | P06 |   - Industry
+2026-06-22 11:51:50 | INFO | P06 |   - Occupation
+2026-06-22 11:51:50 | INFO | P06 |   - Employment
+2026-06-22 11:51:50 | INFO | P06 |   - Hourly mean wage
+2026-06-22 11:51:50 | INFO | P06 |   - Annual mean wage
+2026-06-22 11:51:50 | INFO | P06 |   - Wage percent relative standard error
+2026-06-22 11:51:50 | INFO | P06 |   - Annual median wage
+2026-06-22 11:51:50 | INFO | P06 |   - Location Quotient
+2026-06-22 11:51:50 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-22 11:51:50 | INFO | P06 |   - area
+2026-06-22 11:51:50 | INFO | P06 |   - industry
+2026-06-22 11:51:50 | INFO | P06 |   - occupation
+2026-06-22 11:51:50 | INFO | P06 |   - employment
+2026-06-22 11:51:50 | INFO | P06 |   - hourly mean wage
+2026-06-22 11:51:50 | INFO | P06 |   - annual mean wage
+2026-06-22 11:51:50 | INFO | P06 |   - wage percent relative standard error
+2026-06-22 11:51:50 | INFO | P06 |   - annual median wage
+2026-06-22 11:51:50 | INFO | P06 |   - location quotient
+2026-06-22 11:51:50 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-22 11:51:50 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-22 11:51:50 | INFO | P06 | Building starter data dictionary
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-22 11:51:50 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-22 11:51:50 | INFO | P06 | Column names
+2026-06-22 11:51:50 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-22 11:51:50 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-22 11:51:50 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-22 11:51:50 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-22 11:51:50 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 11:51:50 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 11:51:50 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 11:51:50 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 11:51:50 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 11:51:50 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 11:51:50 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 11:51:50 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 11:51:50 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 11:51:50 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 11:51:50 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-22 11:51:50 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-22 11:51:50 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 11:51:50 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 11:51:50 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 11:51:50 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 11:51:50 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 11:51:50 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 11:51:50 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 11:51:50 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 11:51:50 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 11:51:50 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 11:51:50 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                                                   annual mean wage                                               \
+                                                              count           mean           std     min     max   
+occupation                                                                                                         
+Actuaries (15-2011)                                               2  128460.000000   9899.494937  121460  135460   
+Computer Network Architects (15-1241)                             5  122974.000000  16641.139685  107310  147970   
+Computer Network Support Specialists (15-1231)                    5   74426.000000   7611.230518   63870   82310   
+Computer Occupations, All Other (15-1299)                         5  101550.000000  13128.427172   86370  113040   
+Computer Programmers (15-1251)                                    3   99073.333333   5280.400869   94810  104980   
+Computer Systems Analysts (15-1211)                               5   97624.000000  11488.343223   84640  111870   
+Computer User Support Specialists (15-1232)                       5   61042.000000   5033.882200   53890   66570   
+Computer and Information Research Scientists (1...                3  136656.666667  17505.188755  124370  156700   
+Data Scientists (15-2051)                                         5  101746.000000  15039.781581   82960  116600   
+Database Administrators (15-1242)                                 5   99114.000000  17440.350627   76440  116090   
+Database Architects (15-1243)                                     4  128112.500000  20754.802456  102800  149480   
+Information Security Analysts (15-1212)                           5  110824.000000  16052.369918   89480  128530   
+Network and Computer Systems Administrators (15...                5   89944.000000  10413.845591   75170  102210   
+Operations Research Analysts (15-2031)                            4   78825.000000   9946.759941   64880   87730   
+Software Developers (15-1252)                                     5  122796.000000  11193.256005  110170  133630   
+Software Quality Assurance Analysts and Testers...                4   97217.500000  10938.922479   81120  104970   
+Statisticians (15-2041)                                           2  119470.000000   2460.731599  117730  121210   
+Web Developers (15-1254)                                          4   92252.500000   8830.256225   85840  105300   
+Web and Digital Interface Designers (15-1255)                     3   72906.666667  18638.469179   51400   84360   
+
+                                                   annual median wage                                          \
+                                                                count      mean           std     min     max   
+occupation                                                                                                      
+Actuaries (15-2011)                                                 2  117925.0  16171.532086  106490  129360   
+Computer Network Architects (15-1241)                               5  120964.0  22882.479761  102830  156560   
+Computer Network Support Specialists (15-1231)                      5   67812.0   7737.707671   58000   76160   
+Computer Occupations, All Other (15-1299)                           5   96820.0  14040.680183   80330  108450   
+Computer Programmers (15-1251)                                      3   99170.0   1954.712255   96920  100450   
+Computer Systems Analysts (15-1211)                                 5   92040.0  12313.332205   77760  105080   
+Computer User Support Specialists (15-1232)                         5   56944.0   4106.735930   51630   61050   
+Computer and Information Research Scientists (1...                  3  122930.0  17422.649052  109660  142660   
+Data Scientists (15-2051)                                           5   94870.0  14948.747439   77190  109990   
+Database Administrators (15-1242)                                   5   97330.0  25542.950104   63100  124560   
+Database Architects (15-1243)                                       4  124535.0  19103.463037   99000  143540   
+Information Security Analysts (15-1212)                             5  108698.0  15614.084027   91060  129440   
+Network and Computer Systems Administrators (15...                  5   86160.0  12231.244826   69890  101560   
+Operations Research Analysts (15-2031)                              4   70602.5   8659.543387   62830   79940   
+Software Developers (15-1252)                                       5  118428.0  15447.108791  101020  130450   
+Software Quality Assurance Analysts and Testers...                  4   93307.5  12499.595660   75520  104250   
+Statisticians (15-2041)                                             2  110900.0   7396.336931  105670  116130   
+Web Developers (15-1254)                                            4   87535.0  12709.939680   78910  106360   
+Web and Digital Interface Designers (15-1255)                       3   66430.0  16118.185382   47850   76660   
+
+                                                   employment                                       location quotient  \
+                                                        count         mean          std  min    max             count   
+occupation                                                                                                              
+Actuaries (15-2011)                                         2   300.000000    70.710678  250    350                 2   
+Computer Network Architects (15-1241)                       5  1072.000000   941.419142   40   2010                 5   
+Computer Network Support Specialists (15-1231)              5  1106.000000   964.251005   80   2080                 5   
+Computer Occupations, All Other (15-1299)                   5  2528.000000  2836.497841  380   7330                 5   
+Computer Programmers (15-1251)                              3   676.666667   145.716620  540    830                 3   
+Computer Systems Analysts (15-1211)                         5  3100.000000  2975.264694  100   7100                 5   
+Computer User Support Specialists (15-1232)                 5  4314.000000  3647.839086  320   7470                 5   
+Computer and Information Research Scientists (1...          3   156.666667    81.445278  100    250                 3   
+Data Scientists (15-2051)                                   5  1210.000000  1090.206402   50   2640                 5   
+Database Administrators (15-1242)                           5   382.000000   302.274709   30    670                 5   
+Database Architects (15-1243)                               4   342.500000   281.824413   30    710                 4   
+Information Security Analysts (15-1212)                     5  1228.000000  1093.969835   40   2460                 5   
+Network and Computer Systems Administrators (15...          5  2434.000000  2175.977941  110   4720                 5   
+Operations Research Analysts (15-2031)                      4   945.000000   781.131658   30   1940                 4   
+Software Developers (15-1252)                               5  7650.000000  6842.517811  230  14230                 5   
+Software Quality Assurance Analysts and Testers...          4  1325.000000   879.488488   70   1940                 4   
+Statisticians (15-2041)                                     2    90.000000    28.284271   70    110                 2   
+Web Developers (15-1254)                                    4   410.000000   265.832027   30    650                 4   
+Web and Digital Interface Designers (15-1255)               3   643.333333   600.027777   40   1240                 3   
+
+                                                                                    
+                                                        mean       std   min   max  
+occupation                                                                          
+Actuaries (15-2011)                                 1.245000  0.233345  1.08  1.41  
+Computer Network Architects (15-1241)               0.830000  0.414005  0.21  1.30  
+Computer Network Support Specialists (15-1231)      1.082000  0.445892  0.52  1.65  
+Computer Occupations, All Other (15-1299)           1.100000  0.631348  0.51  1.95  
+Computer Programmers (15-1251)                      0.813333  0.165630  0.64  0.97  
+Computer Systems Analysts (15-1211)                 0.786000  0.477211  0.20  1.47  
+Computer User Support Specialists (15-1232)         0.906000  0.280232  0.45  1.15  
+Computer and Information Research Scientists (1...  0.463333  0.231157  0.32  0.73  
+Data Scientists (15-2051)                           0.748000  0.389641  0.19  1.17  
+Database Administrators (15-1242)                   0.966000  0.392976  0.45  1.55  
+Database Architects (15-1243)                       0.737500  0.345097  0.44  1.23  
+Information Security Analysts (15-1212)             0.910000  0.436864  0.21  1.39  
+Network and Computer Systems Administrators (15...  1.122000  0.493680  0.35  1.61  
+Operations Research Analysts (15-2031)              1.062500  0.616786  0.45  1.92  
+Software Developers (15-1252)                       0.610000  0.321325  0.14  0.91  
+Software Quality Assurance Analysts and Testers...  0.915000  0.277308  0.55  1.15  
+Statisticians (15-2041)                             0.340000  0.113137  0.26  0.42  
+Web Developers (15-1254)                            0.795000  0.162993  0.63  1.01  
+Web and Digital Interface Designers (15-1255)       0.750000  0.422256  0.38  1.21  
+2026-06-22 11:51:50 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                                                                  count           mean           std        min  \
+occupation                                                                                                        
+Actuaries (15-2011)                           annual mean wage        2  128460.000000   9899.494937  121460.00   
+                                              annual median wage      2  117925.000000  16171.532086  106490.00   
+                                              employment              2     300.000000     70.710678     250.00   
+                                              location quotient       2       1.245000      0.233345       1.08   
+Computer Network Architects (15-1241)         annual mean wage        5  122974.000000  16641.139685  107310.00   
+...                                                                 ...            ...           ...        ...   
+Web Developers (15-1254)                      location quotient       4       0.795000      0.162993       0.63   
+Web and Digital Interface Designers (15-1255) annual mean wage        3   72906.666667  18638.469179   51400.00   
+                                              annual median wage      3   66430.000000  16118.185382   47850.00   
+                                              employment              3     643.333333    600.027777      40.00   
+                                              location quotient       3       0.750000      0.422256       0.38   
+
+                                                                        max  
+occupation                                                                   
+Actuaries (15-2011)                           annual mean wage    135460.00  
+                                              annual median wage  129360.00  
+                                              employment             350.00  
+                                              location quotient        1.41  
+Computer Network Architects (15-1241)         annual mean wage    147970.00  
+...                                                                     ...  
+Web Developers (15-1254)                      location quotient        1.01  
+Web and Digital Interface Designers (15-1255) annual mean wage     84360.00  
+                                              annual median wage   76660.00  
+                                              employment            1240.00  
+                                              location quotient        1.21  
+
+[76 rows x 5 columns]
+2026-06-22 11:51:50 | INFO | P06 | 
+Correlation matrix:
+2026-06-22 11:51:50 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-22 11:51:50 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-22 11:51:57 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-22 11:51:57 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-22 11:51:57 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-22 11:57:54 | INFO | P06 | === RUN START ===
+2026-06-22 11:57:54 | INFO | P06 | project=P06
+2026-06-22 11:57:54 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:57:54 | INFO | P06 | python=3.14.0
+2026-06-22 11:57:54 | INFO | P06 | os=Windows 11
+2026-06-22 11:57:54 | INFO | P06 | shell=powershell
+2026-06-22 11:57:54 | INFO | P06 | cwd=.
+2026-06-22 11:57:54 | INFO | P06 | github_actions=False
+2026-06-22 11:57:54 | INFO | P06 | === RUN START ===
+2026-06-22 11:57:54 | INFO | P06 | project=P06
+2026-06-22 11:57:54 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:57:54 | INFO | P06 | python=3.14.0
+2026-06-22 11:57:54 | INFO | P06 | os=Windows 11
+2026-06-22 11:57:54 | INFO | P06 | shell=powershell
+2026-06-22 11:57:54 | INFO | P06 | cwd=.
+2026-06-22 11:57:54 | INFO | P06 | github_actions=False
+2026-06-22 11:57:54 | INFO | P06 | === RUN START ===
+2026-06-22 11:57:54 | INFO | P06 | project=EDA
+2026-06-22 11:57:54 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 11:57:54 | INFO | P06 | python=3.14.0
+2026-06-22 11:57:54 | INFO | P06 | os=Windows 11
+2026-06-22 11:57:54 | INFO | P06 | shell=powershell
+2026-06-22 11:57:54 | INFO | P06 | cwd=.
+2026-06-22 11:57:54 | INFO | P06 | github_actions=False
+2026-06-22 11:57:54 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-22 11:57:55 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-22 11:57:55 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-22 11:57:55 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-22 11:57:55 | INFO | P06 | Initial column names:
+2026-06-22 11:57:55 | INFO | P06 |   - Area
+2026-06-22 11:57:55 | INFO | P06 |   - Industry
+2026-06-22 11:57:55 | INFO | P06 |   - Occupation
+2026-06-22 11:57:55 | INFO | P06 |   - Employment
+2026-06-22 11:57:55 | INFO | P06 |   - Hourly mean wage
+2026-06-22 11:57:55 | INFO | P06 |   - Annual mean wage
+2026-06-22 11:57:55 | INFO | P06 |   - Wage percent relative standard error
+2026-06-22 11:57:55 | INFO | P06 |   - Annual median wage
+2026-06-22 11:57:55 | INFO | P06 |   - Location Quotient
+2026-06-22 11:57:55 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-22 11:57:55 | INFO | P06 |   - area
+2026-06-22 11:57:55 | INFO | P06 |   - industry
+2026-06-22 11:57:55 | INFO | P06 |   - occupation
+2026-06-22 11:57:55 | INFO | P06 |   - employment
+2026-06-22 11:57:55 | INFO | P06 |   - hourly mean wage
+2026-06-22 11:57:55 | INFO | P06 |   - annual mean wage
+2026-06-22 11:57:55 | INFO | P06 |   - wage percent relative standard error
+2026-06-22 11:57:55 | INFO | P06 |   - annual median wage
+2026-06-22 11:57:55 | INFO | P06 |   - location quotient
+2026-06-22 11:57:55 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-22 11:57:55 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-22 11:57:55 | INFO | P06 | Building starter data dictionary
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-22 11:57:55 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-22 11:57:55 | INFO | P06 | Column names
+2026-06-22 11:57:55 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-22 11:57:55 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-22 11:57:55 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-22 11:57:55 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-22 11:57:55 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 11:57:55 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 11:57:55 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 11:57:55 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 11:57:55 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 11:57:55 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 11:57:55 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 11:57:55 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 11:57:55 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 11:57:55 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 11:57:55 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-22 11:57:55 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-22 11:57:55 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 11:57:55 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 11:57:55 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 11:57:55 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 11:57:55 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 11:57:55 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 11:57:55 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 11:57:55 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 11:57:55 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 11:57:55 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 11:57:55 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                                                   annual mean wage                                               \
+                                                              count           mean           std     min     max   
+occupation                                                                                                         
+Actuaries (15-2011)                                               2  128460.000000   9899.494937  121460  135460   
+Computer Network Architects (15-1241)                             5  122974.000000  16641.139685  107310  147970   
+Computer Network Support Specialists (15-1231)                    5   74426.000000   7611.230518   63870   82310   
+Computer Occupations, All Other (15-1299)                         5  101550.000000  13128.427172   86370  113040   
+Computer Programmers (15-1251)                                    3   99073.333333   5280.400869   94810  104980   
+Computer Systems Analysts (15-1211)                               5   97624.000000  11488.343223   84640  111870   
+Computer User Support Specialists (15-1232)                       5   61042.000000   5033.882200   53890   66570   
+Computer and Information Research Scientists (1...                3  136656.666667  17505.188755  124370  156700   
+Data Scientists (15-2051)                                         5  101746.000000  15039.781581   82960  116600   
+Database Administrators (15-1242)                                 5   99114.000000  17440.350627   76440  116090   
+Database Architects (15-1243)                                     4  128112.500000  20754.802456  102800  149480   
+Information Security Analysts (15-1212)                           5  110824.000000  16052.369918   89480  128530   
+Network and Computer Systems Administrators (15...                5   89944.000000  10413.845591   75170  102210   
+Operations Research Analysts (15-2031)                            4   78825.000000   9946.759941   64880   87730   
+Software Developers (15-1252)                                     5  122796.000000  11193.256005  110170  133630   
+Software Quality Assurance Analysts and Testers...                4   97217.500000  10938.922479   81120  104970   
+Statisticians (15-2041)                                           2  119470.000000   2460.731599  117730  121210   
+Web Developers (15-1254)                                          4   92252.500000   8830.256225   85840  105300   
+Web and Digital Interface Designers (15-1255)                     3   72906.666667  18638.469179   51400   84360   
+
+                                                   annual median wage                                          \
+                                                                count      mean           std     min     max   
+occupation                                                                                                      
+Actuaries (15-2011)                                                 2  117925.0  16171.532086  106490  129360   
+Computer Network Architects (15-1241)                               5  120964.0  22882.479761  102830  156560   
+Computer Network Support Specialists (15-1231)                      5   67812.0   7737.707671   58000   76160   
+Computer Occupations, All Other (15-1299)                           5   96820.0  14040.680183   80330  108450   
+Computer Programmers (15-1251)                                      3   99170.0   1954.712255   96920  100450   
+Computer Systems Analysts (15-1211)                                 5   92040.0  12313.332205   77760  105080   
+Computer User Support Specialists (15-1232)                         5   56944.0   4106.735930   51630   61050   
+Computer and Information Research Scientists (1...                  3  122930.0  17422.649052  109660  142660   
+Data Scientists (15-2051)                                           5   94870.0  14948.747439   77190  109990   
+Database Administrators (15-1242)                                   5   97330.0  25542.950104   63100  124560   
+Database Architects (15-1243)                                       4  124535.0  19103.463037   99000  143540   
+Information Security Analysts (15-1212)                             5  108698.0  15614.084027   91060  129440   
+Network and Computer Systems Administrators (15...                  5   86160.0  12231.244826   69890  101560   
+Operations Research Analysts (15-2031)                              4   70602.5   8659.543387   62830   79940   
+Software Developers (15-1252)                                       5  118428.0  15447.108791  101020  130450   
+Software Quality Assurance Analysts and Testers...                  4   93307.5  12499.595660   75520  104250   
+Statisticians (15-2041)                                             2  110900.0   7396.336931  105670  116130   
+Web Developers (15-1254)                                            4   87535.0  12709.939680   78910  106360   
+Web and Digital Interface Designers (15-1255)                       3   66430.0  16118.185382   47850   76660   
+
+                                                   employment                                       location quotient  \
+                                                        count         mean          std  min    max             count   
+occupation                                                                                                              
+Actuaries (15-2011)                                         2   300.000000    70.710678  250    350                 2   
+Computer Network Architects (15-1241)                       5  1072.000000   941.419142   40   2010                 5   
+Computer Network Support Specialists (15-1231)              5  1106.000000   964.251005   80   2080                 5   
+Computer Occupations, All Other (15-1299)                   5  2528.000000  2836.497841  380   7330                 5   
+Computer Programmers (15-1251)                              3   676.666667   145.716620  540    830                 3   
+Computer Systems Analysts (15-1211)                         5  3100.000000  2975.264694  100   7100                 5   
+Computer User Support Specialists (15-1232)                 5  4314.000000  3647.839086  320   7470                 5   
+Computer and Information Research Scientists (1...          3   156.666667    81.445278  100    250                 3   
+Data Scientists (15-2051)                                   5  1210.000000  1090.206402   50   2640                 5   
+Database Administrators (15-1242)                           5   382.000000   302.274709   30    670                 5   
+Database Architects (15-1243)                               4   342.500000   281.824413   30    710                 4   
+Information Security Analysts (15-1212)                     5  1228.000000  1093.969835   40   2460                 5   
+Network and Computer Systems Administrators (15...          5  2434.000000  2175.977941  110   4720                 5   
+Operations Research Analysts (15-2031)                      4   945.000000   781.131658   30   1940                 4   
+Software Developers (15-1252)                               5  7650.000000  6842.517811  230  14230                 5   
+Software Quality Assurance Analysts and Testers...          4  1325.000000   879.488488   70   1940                 4   
+Statisticians (15-2041)                                     2    90.000000    28.284271   70    110                 2   
+Web Developers (15-1254)                                    4   410.000000   265.832027   30    650                 4   
+Web and Digital Interface Designers (15-1255)               3   643.333333   600.027777   40   1240                 3   
+
+                                                                                    
+                                                        mean       std   min   max  
+occupation                                                                          
+Actuaries (15-2011)                                 1.245000  0.233345  1.08  1.41  
+Computer Network Architects (15-1241)               0.830000  0.414005  0.21  1.30  
+Computer Network Support Specialists (15-1231)      1.082000  0.445892  0.52  1.65  
+Computer Occupations, All Other (15-1299)           1.100000  0.631348  0.51  1.95  
+Computer Programmers (15-1251)                      0.813333  0.165630  0.64  0.97  
+Computer Systems Analysts (15-1211)                 0.786000  0.477211  0.20  1.47  
+Computer User Support Specialists (15-1232)         0.906000  0.280232  0.45  1.15  
+Computer and Information Research Scientists (1...  0.463333  0.231157  0.32  0.73  
+Data Scientists (15-2051)                           0.748000  0.389641  0.19  1.17  
+Database Administrators (15-1242)                   0.966000  0.392976  0.45  1.55  
+Database Architects (15-1243)                       0.737500  0.345097  0.44  1.23  
+Information Security Analysts (15-1212)             0.910000  0.436864  0.21  1.39  
+Network and Computer Systems Administrators (15...  1.122000  0.493680  0.35  1.61  
+Operations Research Analysts (15-2031)              1.062500  0.616786  0.45  1.92  
+Software Developers (15-1252)                       0.610000  0.321325  0.14  0.91  
+Software Quality Assurance Analysts and Testers...  0.915000  0.277308  0.55  1.15  
+Statisticians (15-2041)                             0.340000  0.113137  0.26  0.42  
+Web Developers (15-1254)                            0.795000  0.162993  0.63  1.01  
+Web and Digital Interface Designers (15-1255)       0.750000  0.422256  0.38  1.21  
+2026-06-22 11:57:55 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                                                                  count           mean           std        min  \
+occupation                                                                                                        
+Actuaries (15-2011)                           annual mean wage        2  128460.000000   9899.494937  121460.00   
+                                              annual median wage      2  117925.000000  16171.532086  106490.00   
+                                              employment              2     300.000000     70.710678     250.00   
+                                              location quotient       2       1.245000      0.233345       1.08   
+Computer Network Architects (15-1241)         annual mean wage        5  122974.000000  16641.139685  107310.00   
+...                                                                 ...            ...           ...        ...   
+Web Developers (15-1254)                      location quotient       4       0.795000      0.162993       0.63   
+Web and Digital Interface Designers (15-1255) annual mean wage        3   72906.666667  18638.469179   51400.00   
+                                              annual median wage      3   66430.000000  16118.185382   47850.00   
+                                              employment              3     643.333333    600.027777      40.00   
+                                              location quotient       3       0.750000      0.422256       0.38   
+
+                                                                        max  
+occupation                                                                   
+Actuaries (15-2011)                           annual mean wage    135460.00  
+                                              annual median wage  129360.00  
+                                              employment             350.00  
+                                              location quotient        1.41  
+Computer Network Architects (15-1241)         annual mean wage    147970.00  
+...                                                                     ...  
+Web Developers (15-1254)                      location quotient        1.01  
+Web and Digital Interface Designers (15-1255) annual mean wage     84360.00  
+                                              annual median wage   76660.00  
+                                              employment            1240.00  
+                                              location quotient        1.21  
+
+[76 rows x 5 columns]
+2026-06-22 11:57:55 | INFO | P06 | 
+Correlation matrix:
+2026-06-22 11:57:55 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-22 11:57:55 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-22 11:57:59 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-22 11:57:59 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-22 11:57:59 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-22 12:01:01 | INFO | P06 | === RUN START ===
+2026-06-22 12:01:01 | INFO | P06 | project=P06
+2026-06-22 12:01:01 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 12:01:01 | INFO | P06 | python=3.14.0
+2026-06-22 12:01:01 | INFO | P06 | os=Windows 11
+2026-06-22 12:01:01 | INFO | P06 | shell=powershell
+2026-06-22 12:01:01 | INFO | P06 | cwd=.
+2026-06-22 12:01:01 | INFO | P06 | github_actions=False
+2026-06-22 12:01:01 | INFO | P06 | === RUN START ===
+2026-06-22 12:01:01 | INFO | P06 | project=P06
+2026-06-22 12:01:01 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 12:01:01 | INFO | P06 | python=3.14.0
+2026-06-22 12:01:01 | INFO | P06 | os=Windows 11
+2026-06-22 12:01:01 | INFO | P06 | shell=powershell
+2026-06-22 12:01:01 | INFO | P06 | cwd=.
+2026-06-22 12:01:01 | INFO | P06 | github_actions=False
+2026-06-22 12:01:01 | INFO | P06 | === RUN START ===
+2026-06-22 12:01:01 | INFO | P06 | project=EDA
+2026-06-22 12:01:01 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 12:01:01 | INFO | P06 | python=3.14.0
+2026-06-22 12:01:01 | INFO | P06 | os=Windows 11
+2026-06-22 12:01:01 | INFO | P06 | shell=powershell
+2026-06-22 12:01:01 | INFO | P06 | cwd=.
+2026-06-22 12:01:01 | INFO | P06 | github_actions=False
+2026-06-22 12:01:01 | INFO | P06 | Loading dataset: alex_OES_Report
+2026-06-22 12:01:02 | INFO | P06 | Loaded: 82 rows, 9 columns
+2026-06-22 12:01:02 | INFO | P06 | Initial dataset shape: 82 rows, 9 columns
+2026-06-22 12:01:02 | INFO | P06 | Cleaning data by dropping rows with missing values
+2026-06-22 12:01:02 | INFO | P06 | Initial column names:
+2026-06-22 12:01:02 | INFO | P06 |   - Area
+2026-06-22 12:01:02 | INFO | P06 |   - Industry
+2026-06-22 12:01:02 | INFO | P06 |   - Occupation
+2026-06-22 12:01:02 | INFO | P06 |   - Employment
+2026-06-22 12:01:02 | INFO | P06 |   - Hourly mean wage
+2026-06-22 12:01:02 | INFO | P06 |   - Annual mean wage
+2026-06-22 12:01:02 | INFO | P06 |   - Wage percent relative standard error
+2026-06-22 12:01:02 | INFO | P06 |   - Annual median wage
+2026-06-22 12:01:02 | INFO | P06 |   - Location Quotient
+2026-06-22 12:01:02 | INFO | P06 | Stripped whitespace from column names, new column names:
+2026-06-22 12:01:02 | INFO | P06 |   - area
+2026-06-22 12:01:02 | INFO | P06 |   - industry
+2026-06-22 12:01:02 | INFO | P06 |   - occupation
+2026-06-22 12:01:02 | INFO | P06 |   - employment
+2026-06-22 12:01:02 | INFO | P06 |   - hourly mean wage
+2026-06-22 12:01:02 | INFO | P06 |   - annual mean wage
+2026-06-22 12:01:02 | INFO | P06 |   - wage percent relative standard error
+2026-06-22 12:01:02 | INFO | P06 |   - annual median wage
+2026-06-22 12:01:02 | INFO | P06 |   - location quotient
+2026-06-22 12:01:02 | INFO | P06 | After cleaning: 79 rows, 9 columns
+2026-06-22 12:01:02 | INFO | P06 | Dropped 3 rows due to missing values or '(8) -' entries
+2026-06-22 12:01:02 | INFO | P06 | Building starter data dictionary
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                                 column    dtype  missing_count  missing_pct
+0                                  area      str              0          0.0
+1                              industry      str              0          0.0
+2                            occupation      str              0          0.0
+3                            employment    int64              0          0.0
+4                      hourly mean wage  float64              0          0.0
+5                      annual mean wage    int64              0          0.0
+6  wage percent relative standard error  float64              0          0.0
+7                    annual median wage    int64              0          0.0
+8                     location quotient  float64              0          0.0
+2026-06-22 12:01:02 | INFO | P06 | Previewing first few rows of the dataset
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                            area                                           industry  \
+0  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+1  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+2  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+3  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+4  Orlando-Kissimmee-Sanford, FL  Cross-Industry, Private, Federal, State, and L...   
+
+                                          occupation  employment  hourly mean wage  annual mean wage  \
+0                Computer Systems Analysts (15-1211)        4200             49.78            103540   
+1            Information Security Analysts (15-1212)        1890             61.79            128530   
+2  Computer and Information Research Scientists (...         250             61.97            128900   
+3     Computer Network Support Specialists (15-1231)        1440             34.13             70990   
+4        Computer User Support Specialists (15-1232)        7470             29.07             60460   
+
+   wage percent relative standard error  annual median wage  location quotient  
+0                                   1.9              100780               0.89  
+1                                   1.4              129440               1.09  
+2                                   6.5              116470               0.73  
+3                                   2.3               63460               1.08  
+4                                   1.3               54430               1.15  
+2026-06-22 12:01:02 | INFO | P06 | Column names
+2026-06-22 12:01:02 | DEBUG | P06 | ['area', 'industry', 'occupation', 'employment', 'hourly mean wage', 'annual mean wage', 'wage percent relative standard error', 'annual median wage', 'location quotient']
+2026-06-22 12:01:02 | INFO | P06 | DataFrame info (types and non-null counts)
+2026-06-22 12:01:02 | INFO | P06 | Dataset shape: 79 rows, 9 columns
+2026-06-22 12:01:02 | INFO | P06 | After dropping NA values: 79 rows, 9 columns
+2026-06-22 12:01:02 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 12:01:02 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 12:01:02 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 12:01:02 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 12:01:02 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 12:01:02 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 12:01:02 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 12:01:02 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 12:01:02 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 12:01:02 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 12:01:02 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                                      annual mean wage                                             annual median wage  \
+                                                 count           mean           std    min     max              count   
+area                                                                                                                    
+Central Missouri nonmetropolitan area               11   80522.727273  19328.819980  51400  111740                 11   
+Columbia, MO                                        14   87700.000000  15919.870023  59240  116380                 14   
+Orlando-Kissimmee-Sanford, FL                       18  107285.555556  24872.202112  60460  149480                 18   
+St. Louis, MO-IL                                    18  105339.444444  21715.022578  65050  156700                 18   
+Tampa-St. Petersburg-Clearwater, FL                 18  109822.222222  19435.469260  66570  139760                 18   
+
+                                                                                  employment               \
+                                                mean           std    min     max      count         mean   
+area                                                                                                        
+Central Missouri nonmetropolitan area   75138.181818  18957.215417  47850  102830         11   129.090909   
+Columbia, MO                            82021.428571  15417.477025  56670  111310         14   182.142857   
+Orlando-Kissimmee-Sanford, FL          103967.777778  26875.888287  54430  156560         18  2462.777778   
+St. Louis, MO-IL                       100187.777778  22344.673942  60940  142660         18  2438.333333   
+Tampa-St. Petersburg-Clearwater, FL    104326.111111  20112.622943  61050  133290         18  2790.555556   
+
+                                                               location quotient                                  
+                                               std  min    max             count      mean       std   min   max  
+area                                                                                                              
+Central Missouri nonmetropolitan area   123.729911   30    380                11  0.360909  0.212201  0.14  0.87  
+Columbia, MO                            172.590158   30    530                14  0.840714  0.367308  0.45  1.57  
+Orlando-Kissimmee-Sanford, FL          3299.906960   70  13440                18  0.890556  0.309525  0.26  1.49  
+St. Louis, MO-IL                       2706.430795  100   9820                18  1.015000  0.368019  0.32  1.95  
+Tampa-St. Petersburg-Clearwater, FL    3595.463600  110  14230                18  1.030556  0.432972  0.34  1.92  
+2026-06-22 12:01:02 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                                                          count           mean           std       min        max
+area                                                                                                             
+Central Missouri nonmetropolitan area annual mean wage       11   80522.727273  19328.819980  51400.00  111740.00
+                                      annual median wage     11   75138.181818  18957.215417  47850.00  102830.00
+                                      employment             11     129.090909    123.729911     30.00     380.00
+                                      location quotient      11       0.360909      0.212201      0.14       0.87
+Columbia, MO                          annual mean wage       14   87700.000000  15919.870023  59240.00  116380.00
+                                      annual median wage     14   82021.428571  15417.477025  56670.00  111310.00
+                                      employment             14     182.142857    172.590158     30.00     530.00
+                                      location quotient      14       0.840714      0.367308      0.45       1.57
+Orlando-Kissimmee-Sanford, FL         annual mean wage       18  107285.555556  24872.202112  60460.00  149480.00
+                                      annual median wage     18  103967.777778  26875.888287  54430.00  156560.00
+                                      employment             18    2462.777778   3299.906960     70.00   13440.00
+                                      location quotient      18       0.890556      0.309525      0.26       1.49
+St. Louis, MO-IL                      annual mean wage       18  105339.444444  21715.022578  65050.00  156700.00
+                                      annual median wage     18  100187.777778  22344.673942  60940.00  142660.00
+                                      employment             18    2438.333333   2706.430795    100.00    9820.00
+                                      location quotient      18       1.015000      0.368019      0.32       1.95
+Tampa-St. Petersburg-Clearwater, FL   annual mean wage       18  109822.222222  19435.469260  66570.00  139760.00
+                                      annual median wage     18  104326.111111  20112.622943  61050.00  133290.00
+                                      employment             18    2790.555556   3595.463600    110.00   14230.00
+                                      location quotient      18       1.030556      0.432972      0.34       1.92
+2026-06-22 12:01:02 | INFO | P06 | --------------- Manual statistics ---------------
+2026-06-22 12:01:02 | DEBUG | P06 | annual mean wage Statistics (using numpy):
+2026-06-22 12:01:02 | DEBUG | P06 |   Mean: 100222.78
+2026-06-22 12:01:02 | DEBUG | P06 |   Std Dev: 22913.57
+2026-06-22 12:01:02 | DEBUG | P06 |   Min: 51400.00
+2026-06-22 12:01:02 | DEBUG | P06 |   Max: 156700.00
+2026-06-22 12:01:02 | DEBUG | P06 |   Range: 105300.00
+2026-06-22 12:01:02 | INFO | P06 | --------------- Using pandas describe() method ---------------
+2026-06-22 12:01:02 | INFO | P06 | Computing overall descriptive statistics
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                    count           mean           std       min        25%        50%       75%        max
+annual mean wage     79.0  100222.784810  23059.983484  51400.00  84395.000  102210.00  115610.0  156700.00
+annual median wage   79.0   95284.683544  23889.866366  47850.00  77475.000   99000.00  107520.0  156560.00
+employment           79.0    1802.784810   2842.453318     30.00    150.000     650.00    1940.0   14230.00
+location quotient    79.0       0.868228      0.408797      0.14      0.565       0.87       1.1       1.95
+2026-06-22 12:01:02 | INFO | P06 | --------------- Using pandas groupby() and agg() ---------------
+2026-06-22 12:01:02 | INFO | P06 | Computing descriptive statistics by group
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                                                   annual mean wage                                               \
+                                                              count           mean           std     min     max   
+occupation                                                                                                         
+Actuaries (15-2011)                                               2  128460.000000   9899.494937  121460  135460   
+Computer Network Architects (15-1241)                             5  122974.000000  16641.139685  107310  147970   
+Computer Network Support Specialists (15-1231)                    5   74426.000000   7611.230518   63870   82310   
+Computer Occupations, All Other (15-1299)                         5  101550.000000  13128.427172   86370  113040   
+Computer Programmers (15-1251)                                    3   99073.333333   5280.400869   94810  104980   
+Computer Systems Analysts (15-1211)                               5   97624.000000  11488.343223   84640  111870   
+Computer User Support Specialists (15-1232)                       5   61042.000000   5033.882200   53890   66570   
+Computer and Information Research Scientists (1...                3  136656.666667  17505.188755  124370  156700   
+Data Scientists (15-2051)                                         5  101746.000000  15039.781581   82960  116600   
+Database Administrators (15-1242)                                 5   99114.000000  17440.350627   76440  116090   
+Database Architects (15-1243)                                     4  128112.500000  20754.802456  102800  149480   
+Information Security Analysts (15-1212)                           5  110824.000000  16052.369918   89480  128530   
+Network and Computer Systems Administrators (15...                5   89944.000000  10413.845591   75170  102210   
+Operations Research Analysts (15-2031)                            4   78825.000000   9946.759941   64880   87730   
+Software Developers (15-1252)                                     5  122796.000000  11193.256005  110170  133630   
+Software Quality Assurance Analysts and Testers...                4   97217.500000  10938.922479   81120  104970   
+Statisticians (15-2041)                                           2  119470.000000   2460.731599  117730  121210   
+Web Developers (15-1254)                                          4   92252.500000   8830.256225   85840  105300   
+Web and Digital Interface Designers (15-1255)                     3   72906.666667  18638.469179   51400   84360   
+
+                                                   annual median wage                                          \
+                                                                count      mean           std     min     max   
+occupation                                                                                                      
+Actuaries (15-2011)                                                 2  117925.0  16171.532086  106490  129360   
+Computer Network Architects (15-1241)                               5  120964.0  22882.479761  102830  156560   
+Computer Network Support Specialists (15-1231)                      5   67812.0   7737.707671   58000   76160   
+Computer Occupations, All Other (15-1299)                           5   96820.0  14040.680183   80330  108450   
+Computer Programmers (15-1251)                                      3   99170.0   1954.712255   96920  100450   
+Computer Systems Analysts (15-1211)                                 5   92040.0  12313.332205   77760  105080   
+Computer User Support Specialists (15-1232)                         5   56944.0   4106.735930   51630   61050   
+Computer and Information Research Scientists (1...                  3  122930.0  17422.649052  109660  142660   
+Data Scientists (15-2051)                                           5   94870.0  14948.747439   77190  109990   
+Database Administrators (15-1242)                                   5   97330.0  25542.950104   63100  124560   
+Database Architects (15-1243)                                       4  124535.0  19103.463037   99000  143540   
+Information Security Analysts (15-1212)                             5  108698.0  15614.084027   91060  129440   
+Network and Computer Systems Administrators (15...                  5   86160.0  12231.244826   69890  101560   
+Operations Research Analysts (15-2031)                              4   70602.5   8659.543387   62830   79940   
+Software Developers (15-1252)                                       5  118428.0  15447.108791  101020  130450   
+Software Quality Assurance Analysts and Testers...                  4   93307.5  12499.595660   75520  104250   
+Statisticians (15-2041)                                             2  110900.0   7396.336931  105670  116130   
+Web Developers (15-1254)                                            4   87535.0  12709.939680   78910  106360   
+Web and Digital Interface Designers (15-1255)                       3   66430.0  16118.185382   47850   76660   
+
+                                                   employment                                       location quotient  \
+                                                        count         mean          std  min    max             count   
+occupation                                                                                                              
+Actuaries (15-2011)                                         2   300.000000    70.710678  250    350                 2   
+Computer Network Architects (15-1241)                       5  1072.000000   941.419142   40   2010                 5   
+Computer Network Support Specialists (15-1231)              5  1106.000000   964.251005   80   2080                 5   
+Computer Occupations, All Other (15-1299)                   5  2528.000000  2836.497841  380   7330                 5   
+Computer Programmers (15-1251)                              3   676.666667   145.716620  540    830                 3   
+Computer Systems Analysts (15-1211)                         5  3100.000000  2975.264694  100   7100                 5   
+Computer User Support Specialists (15-1232)                 5  4314.000000  3647.839086  320   7470                 5   
+Computer and Information Research Scientists (1...          3   156.666667    81.445278  100    250                 3   
+Data Scientists (15-2051)                                   5  1210.000000  1090.206402   50   2640                 5   
+Database Administrators (15-1242)                           5   382.000000   302.274709   30    670                 5   
+Database Architects (15-1243)                               4   342.500000   281.824413   30    710                 4   
+Information Security Analysts (15-1212)                     5  1228.000000  1093.969835   40   2460                 5   
+Network and Computer Systems Administrators (15...          5  2434.000000  2175.977941  110   4720                 5   
+Operations Research Analysts (15-2031)                      4   945.000000   781.131658   30   1940                 4   
+Software Developers (15-1252)                               5  7650.000000  6842.517811  230  14230                 5   
+Software Quality Assurance Analysts and Testers...          4  1325.000000   879.488488   70   1940                 4   
+Statisticians (15-2041)                                     2    90.000000    28.284271   70    110                 2   
+Web Developers (15-1254)                                    4   410.000000   265.832027   30    650                 4   
+Web and Digital Interface Designers (15-1255)               3   643.333333   600.027777   40   1240                 3   
+
+                                                                                    
+                                                        mean       std   min   max  
+occupation                                                                          
+Actuaries (15-2011)                                 1.245000  0.233345  1.08  1.41  
+Computer Network Architects (15-1241)               0.830000  0.414005  0.21  1.30  
+Computer Network Support Specialists (15-1231)      1.082000  0.445892  0.52  1.65  
+Computer Occupations, All Other (15-1299)           1.100000  0.631348  0.51  1.95  
+Computer Programmers (15-1251)                      0.813333  0.165630  0.64  0.97  
+Computer Systems Analysts (15-1211)                 0.786000  0.477211  0.20  1.47  
+Computer User Support Specialists (15-1232)         0.906000  0.280232  0.45  1.15  
+Computer and Information Research Scientists (1...  0.463333  0.231157  0.32  0.73  
+Data Scientists (15-2051)                           0.748000  0.389641  0.19  1.17  
+Database Administrators (15-1242)                   0.966000  0.392976  0.45  1.55  
+Database Architects (15-1243)                       0.737500  0.345097  0.44  1.23  
+Information Security Analysts (15-1212)             0.910000  0.436864  0.21  1.39  
+Network and Computer Systems Administrators (15...  1.122000  0.493680  0.35  1.61  
+Operations Research Analysts (15-2031)              1.062500  0.616786  0.45  1.92  
+Software Developers (15-1252)                       0.610000  0.321325  0.14  0.91  
+Software Quality Assurance Analysts and Testers...  0.915000  0.277308  0.55  1.15  
+Statisticians (15-2041)                             0.340000  0.113137  0.26  0.42  
+Web Developers (15-1254)                            0.795000  0.162993  0.63  1.01  
+Web and Digital Interface Designers (15-1255)       0.750000  0.422256  0.38  1.21  
+2026-06-22 12:01:02 | INFO | P06 | 
+Stacked view - easier to read in logs:
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                                                                  count           mean           std        min  \
+occupation                                                                                                        
+Actuaries (15-2011)                           annual mean wage        2  128460.000000   9899.494937  121460.00   
+                                              annual median wage      2  117925.000000  16171.532086  106490.00   
+                                              employment              2     300.000000     70.710678     250.00   
+                                              location quotient       2       1.245000      0.233345       1.08   
+Computer Network Architects (15-1241)         annual mean wage        5  122974.000000  16641.139685  107310.00   
+...                                                                 ...            ...           ...        ...   
+Web Developers (15-1254)                      location quotient       4       0.795000      0.162993       0.63   
+Web and Digital Interface Designers (15-1255) annual mean wage        3   72906.666667  18638.469179   51400.00   
+                                              annual median wage      3   66430.000000  16118.185382   47850.00   
+                                              employment              3     643.333333    600.027777      40.00   
+                                              location quotient       3       0.750000      0.422256       0.38   
+
+                                                                        max  
+occupation                                                                   
+Actuaries (15-2011)                           annual mean wage    135460.00  
+                                              annual median wage  129360.00  
+                                              employment             350.00  
+                                              location quotient        1.41  
+Computer Network Architects (15-1241)         annual mean wage    147970.00  
+...                                                                     ...  
+Web Developers (15-1254)                      location quotient        1.01  
+Web and Digital Interface Designers (15-1255) annual mean wage     84360.00  
+                                              annual median wage   76660.00  
+                                              employment            1240.00  
+                                              location quotient        1.21  
+
+[76 rows x 5 columns]
+2026-06-22 12:01:02 | INFO | P06 | 
+Correlation matrix:
+2026-06-22 12:01:02 | DEBUG | P06 | 
+                    annual mean wage  annual median wage  employment  location quotient
+annual mean wage            1.000000            0.980939    0.154543          -0.009629
+annual median wage          0.980939            1.000000    0.183284           0.008784
+employment                  0.154543            0.183284    1.000000           0.332140
+location quotient          -0.009629            0.008784    0.332140           1.000000
+2026-06-22 12:01:02 | INFO | P06 | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-22 12:01:06 | INFO | P06 | 
+Area with highest annual mean wage: Tampa-St. Peter
+2026-06-22 12:01:07 | INFO | P06 | Narrowing down to 3 occupations
+2026-06-22 12:01:07 | INFO | P06 |                area                                           industry       occupation  employment  hourly mean wage  \
+14  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2010             53.48   
+16  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Operations Rese         910             40.20   
+18  Orlando-Kissimm  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1440             55.23   
+33  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        2450             52.36   
+35  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Operations Rese        1940             42.18   
+37  Tampa-St. Peter  Cross-Industry, Private, Federal, State, and L...  Data Scientists        1730             56.06   
+49     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         470             42.39   
+50     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Operations Rese          30             31.19   
+51     Columbia, MO  Cross-Industry, Private, Federal, State, and L...  Data Scientists         190             43.04   
+66  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Computer Occupa        7330             54.35   
+68  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Operations Rese         900             38.01   
+70  St. Louis, MO-I  Cross-Industry, Private, Federal, State, and L...  Data Scientists        2640             50.38   
+80  Central Missour  Cross-Industry, Private, Federal, State, and L...  Computer Occupa         380             41.52   
+81  Central Missour  Cross-Industry, Private, Federal, State, and L...  Data Scientists          50             39.89   
+
+    annual mean wage  wage percent relative standard error  annual median wage  location quotient  
+14            111240                                   3.8              106330               0.51  
+16             83620                                   3.6               75990               0.92  
+18            114870                                   2.5              106590               0.61  
+33            108920                                   1.4              106330               0.60  
+35             87730                                   3.8               79940               1.92  
+37            116600                                   2.8              109990               0.71  
+49             88180                                   1.8               80330               1.57  
+50             64880                                   5.6               62830               0.45  
+51             89510                                   1.6               80980               1.06  
+66            113040                                   2.1              108450               1.95  
+68             79070                                   1.5               63650               0.96  
+70            104790                                   1.7               99600               1.17  
+80             86370                                   1.6               82660               0.87  
+81             82960                                   4.8               77190               0.19  
+2026-06-22 12:26:06 | INFO | P06 | === RUN START ===
+2026-06-22 12:26:06 | INFO | P06 | project=P06
+2026-06-22 12:26:06 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 12:26:06 | INFO | P06 | python=3.14.0
+2026-06-22 12:26:06 | INFO | P06 | os=Windows 11
+2026-06-22 12:26:06 | INFO | P06 | shell=powershell
+2026-06-22 12:26:06 | INFO | P06 | cwd=.
+2026-06-22 12:26:06 | INFO | P06 | github_actions=False
+2026-06-22 12:26:43 | INFO | P06 | === RUN START ===
+2026-06-22 12:26:43 | INFO | P06 | project=P06
+2026-06-22 12:26:43 | INFO | P06 | repo_dir=datafun-06-applied
+2026-06-22 12:26:43 | INFO | P06 | python=3.14.0
+2026-06-22 12:26:43 | INFO | P06 | os=Windows 11
+2026-06-22 12:26:43 | INFO | P06 | shell=powershell
+2026-06-22 12:26:43 | INFO | P06 | cwd=.
+2026-06-22 12:26:43 | INFO | P06 | github_actions=False
